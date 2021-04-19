@@ -1,0 +1,154 @@
+.nav-menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.mega-menu
+		@media screen and ( max-width: 1279px)
+			transition: 0s !important
+	@media screen and ( max-width: 1279px )
+		display: none
+	.menu-list
+		list-style: none
+		// width: auto !important
+		position: relative
+		> span 
+			display: none
+		@media screen and ( max-width: 1279px)
+			display: flex
+			flex-direction: column
+			border-bottom: 1px solid #0059b6
+
+		.moblie-show-menu
+			span
+				display: none
+			@media screen and ( max-width: 1279px)
+				display: flex
+				justify-content: space-between
+				align-items: center
+				span
+					color: #333
+					font-size: 24px
+					display: block
+
+		.title-menu-list
+			padding: 15px 0 15px 0
+
+		@media screen and ( max-width: 1279px)
+			.title-menu-list
+				&:hover
+					color: #da251c
+				&::before
+					display: none
+
+		&:hover
+			.mega-menu
+				top: 39px
+				opacity: 1
+				visibility: visible
+				transition: 1s all
+
+		.mega-menu
+			position: absolute
+			opacity: 0
+			left: 0
+			top: 39px
+			z-index: 9
+			background-color: #fff
+			opacity: 0
+			padding: 30px 30px
+			visibility: hidden
+			width: 690px
+			max-width: 690px
+			@media screen and ( max-width: 1279px)
+				position: static
+				padding: 0 15px
+				opacity: 1
+				visibility: visible
+				flex-direction: column
+				display: none
+				width: 100%
+				justify-content: flex-start
+				flex-wrap: nowrap
+				background: none
+			
+			.container
+				padding-left: 0
+				padding-right: 0
+
+		.has-mega-menu
+			width: 100%
+			justify-content: center
+			flex-wrap: wrap
+			display: flex
+			padding: 0
+			@media screen and ( max-width: 1279px)
+				padding-bottom: 0
+			> li
+				flex: 0 0 100%
+				max-width: 100%
+				padding: 0 0 15px 0
+				list-style: none
+				@media screen and ( max-width: 1279px)
+					max-width: unset
+					width: 100%
+					flex: inherit
+					border-bottom: 1px solid #ffffff
+					padding-bottom: 10px
+					padding-top: 10px
+					padding-left: 0
+					&:first-child
+						padding-top: 0
+						padding-bottom: 0
+					&:last-child
+						padding-bottom: 0
+						border-bottom: 0
+						padding-top: 0
+					& + li 
+						margin-top: 0
+
+				.img-has-mega
+					padding-bottom: 10px
+
+				.moblie-show-mega
+					display: flex
+					justify-content: space-between
+					align-items: center
+					.title-mega
+						color: #da251c
+						position: relative
+						font-size: 14px
+						white-space: nowrap
+						padding-bottom: 5px
+					span
+						color: #ffffff
+						font-size: 24px
+						display: none
+						@media screen and ( max-width: 1279px)
+							display: block
+							.title-mega
+								font-size: 13px
+
+				.mega-list
+					padding: 0
+					list-style: none
+					li
+						padding-bottom: 5px
+						@media screen and ( max-width: 1279px)
+							padding-top: 0
+							padding-bottom: 15px
+							&:last-child
+								padding-bottom: 15px
+					a
+						color: #333
+						font-size: 14px
+						font-weight: 400
+						text-transform: unset
+						border-bottom: 1px solid transparent
+						&:hover
+							border-bottom: 1px solid #333
+
+		@media screen and ( max-width: 1279px )
+			> span
+				display: block
+				font-size: 24px
+				color: #ffffff
