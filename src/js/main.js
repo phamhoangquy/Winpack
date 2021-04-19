@@ -138,6 +138,126 @@ function swiperInit() {
             },
         },
     });
+    var homeSlideSwiper = new Swiper(".home_s-2 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.home_s-2 .nav-arrow-next',
+            prevEl: '.home_s-2 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+    var homeSlideSwiper = new Swiper(".home_s-3 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.home_s-3 .nav-arrow-next',
+            prevEl: '.home_s-3 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+    var homeSlideSwiper = new Swiper(".home_s-4 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.home_s-4 .nav-arrow-next',
+            prevEl: '.home_s-4 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+    var homeSlideSwiper = new Swiper(".home_s-5 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.home_s-5 .nav-arrow-next',
+            prevEl: '.home_s-5 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
 }
 
 function setBackgroundElement() {
