@@ -91,6 +91,13 @@ function mappingMenu() {
         desktopMethod: 'prependTo',
         breakpoint: 1279
     });
+    $('header .header-main .header-menu .language-wrapper .language ').mapping({
+        mobileWrapper: 'header .header-main .header-infor',
+        mobileMethod: 'appendTo',
+        desktopWrapper: 'header .header-main .header-menu .language-wrapper',
+        desktopMethod: 'prependTo',
+        breakpoint: 1279
+    });
 }
 
 
@@ -255,6 +262,37 @@ function swiperInit() {
             },
             1440: {
                 slidesPerView: 5,
+            },
+        },
+    });
+    var shopTMDTSwiper = new Swiper(".home_s-6 .swiper-container", {
+        // Optional parameters
+        breakpointsInverse: true,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.home_s-6 .nav-arrow-next',
+            prevEl: '.home_s-6 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            1025: {
+                slidesPerView: 6,
+            },
+            1440: {
+                slidesPerView: 6,
             },
         },
     });

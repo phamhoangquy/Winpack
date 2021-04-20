@@ -26,6 +26,7 @@ header
 			.header-menu
 				display: flex
 				align-items: center
+				width: max-content
 
 		.header-infor
 			display: flex
@@ -90,6 +91,7 @@ header
 				display: none
 				@media screen and ( max-width: 1279px )
 					display: flex
+					order: 2
 
 	.nav-menu
 		display: flex
@@ -101,7 +103,7 @@ header
 			@media screen and ( max-width: 1279px)
 				padding-right: 0
 			&:last-child
-				padding-right: 0
+				padding-right: 15px
 				border-bottom: 0
 				padding-bottom: 0
 			a
@@ -111,6 +113,7 @@ header
 				font-weight: 700
 				text-transform: uppercase
 				letter-spacing: 1px
+				white-space: nowrap
 			&:hover
 				a
 					color: #da251c
@@ -120,6 +123,37 @@ header
 			.moblie-show-menu
 				a
 					padding: 0
+
+	.language
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		padding-left: 10px
+		cursor: pointer
+		color: #999999
+		margin-right: -10px
+		border-left: 1px solid #e5e5e5
+		
+		a
+			img
+				object-fit: contain
+			span
+				padding-left: 5px
+		&:hover
+			ul
+				display: unset
+		ul
+			display: none
+			list-style: none
+			position: absolute
+			padding: 0
+			top: 20px
+			right: 19px
+		a.current
+			display: flex
+		@media screen and ( max-width: 1279px)
+			border-left: 0
 
 	.menu_mobile
 		width: 50%

@@ -1,0 +1,59 @@
+.home_s-6
+	padding: 55px 0 0 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0 0 0 
+	@media screen and ( max-width: 576px)
+		padding: 20px 0 0 0
+	.brand-slider-swiper-wrapper
+		position: relative
+		margin-top: 30px
+		@media screen and ( max-width: 1024px)
+			margin-top: 20px
+	.nav-arrow-prev,.nav-arrow-next
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 40%
+		transition: .3s all  ease-in-out
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		em
+			transition: .3s all  ease-in-out
+			color: #999999
+			font-size: 24px
+		&:hover
+			em
+				color: #da251c
+		&:focus
+			outline: none
+	.nav-arrow-next
+		right: -50px
+		@media screen and ( max-width: 1350px)
+			right: 0
+		@media screen and ( max-width: 576px)
+			right: 0
+			
+	.nav-arrow-prev
+		left: -50px
+		@media screen and ( max-width: 1350px)
+			left: 0
+		@media screen and ( max-width: 576px)
+			left: 0
+	.swiper-container
+		margin: 0
+		@media screen and ( max-width: 1350px)
+			margin: 0 50px
+
+	.brand-img
+		border: 1px solid #ebebeb
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 20px
+		cursor: pointer
+		img
+			width: 105px
+			height: 90px
+			object-fit: contain
