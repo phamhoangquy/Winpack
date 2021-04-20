@@ -1,0 +1,43 @@
+section.recruitment
+	.container
+		h1.head-title Tuyển dụng
+		.content
+			h2.title Môi trường làm việc
+			.caption Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockupsLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockupsLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockupsLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups
+			.rec-img
+				img(src="./img/recruitment/1.png", alt="")
+
+.recruitment-2(setBackground='./img/recruitment/bg.png' alt="")
+	.container
+		h2.head-title Vị trí tuyển dụng
+		.row
+			-for(i=0; i<6; i++)
+				.col-lg-6
+					a(href="")
+						.content-jobs-list
+							.title-jobs  Nhân viên kỹ thuật (Điện lạnh)
+
+							.top-jobs
+								.city-jobs
+									.icon-jobs
+										span.ri-map-pin-2-fill
+									.title-zone-city Địa điểm: Tp.Hồ Chí Minh
+								.money-jobs
+									.icon-jobs
+										span.ri-money-dollar-circle-fill
+									.title-zone-money 7.000.000 vnđ
+
+							.bottom-jobs
+								.date
+									.icon
+										span.ri-calendar-check-fill
+									time Hạn nộp: 20/03/2021
+								.amount
+									.icon
+										span.ri-account-circle-fill
+									.title-amount Số lượng: 02
+
+							.view-more Chi tiết
+								span.ri-arrow-right-s-line
+		a(href="#").big-view Xem thêm
+			span.ri-arrow-down-line
