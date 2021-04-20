@@ -1,0 +1,50 @@
+section.news-list
+	.container
+		h2.head-title Tin tức
+		.head-menu
+			ul
+				li.active
+					a(href="#") Tin công ty
+				li
+					a(href="#") Tin chuyên ngành
+				li
+					a(href="#") Tin khuyến mãi
+		.row
+			.col-lg-6
+				.news-left
+					.card-img.zoom-in
+						a(href="#")
+							img(src="./img/news/1.png", alt="")
+					.content
+						.date
+							time 15.03.2021
+						.title
+							a(href="#") Ngành pha chế biến và đóng gói bao vì việt nam: nhiều cơ hội để bứt phá và tín hiệu đáng mừng
+						.title-zone Ngành pha chế biến và đóng gói bao vì việt nam: nhiều cơ hội để bứt phá và tín hiệu đáng mừng. Ngành pha chế biến và đóng gói bao vì việt nam: nhiều cơ hội để bứt phá và tín hiệu đáng mừng.Ngành pha chế biến và đóng gói bao vì việt nam: nhiều cơ hội
+
+			.col-lg-6
+				.row
+					-for(i=0;i<4;i++)
+						.col-lg-6
+							.news-right
+								.card-img.zoom-in
+									a(href="#")
+										img(src="./img/news/2.png", alt="")
+								.content
+									.date
+										time 15.03.2021
+									.title
+										a(href="#") Nguyên lý hoạt động của máy đóng gói bao bì tự động
+
+		.row
+			-for(i=0;i<4;i++)
+				.col-lg-3
+					.news-bottom
+						.card-img.zoom-in
+							a(href="#")
+								img(src="./img/news/3.png", alt="")
+						.content
+							.date
+								time 15.03.2021
+							.title
+								a(href="#") Vi phạm về hàng đóng gói sẵn ngày càng tinh vi
