@@ -457,6 +457,254 @@ function swiperInit() {
             },
         },
     });
+
+    var hauMai1Swiper = new Swiper(".haumai-contact .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact .nav-arrow-next',
+            prevEl: '.haumai-contact .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai2Swiper = new Swiper(".haumai-contact-2 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-2 .nav-arrow-next',
+            prevEl: '.haumai-contact-2 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai3Swiper = new Swiper(".haumai-contact-3 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-3 .nav-arrow-next',
+            prevEl: '.haumai-contact-3 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai4Swiper = new Swiper(".haumai-contact-4 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-4 .nav-arrow-next',
+            prevEl: '.haumai-contact-4 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai5Swiper = new Swiper(".haumai-contact-5 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-5 .nav-arrow-next',
+            prevEl: '.haumai-contact-5 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai6Swiper = new Swiper(".haumai-contact-6 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-6 .nav-arrow-next',
+            prevEl: '.haumai-contact-6 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai7Swiper = new Swiper(".haumai-contact-7 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-7 .nav-arrow-next',
+            prevEl: '.haumai-contact-7 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
+
+    var hauMai8Swiper = new Swiper(".haumai-contact-8 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 20,
+        breakpointsInverse: true,
+        navigation: {
+            nextEl: '.haumai-contact-8 .nav-arrow-next',
+            prevEl: '.haumai-contact-8 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 5,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+    });
 }
 
 // Slide project-detail
