@@ -1,0 +1,60 @@
+section.contact
+	.container
+		h1.head-title  Liên hệ
+		.row
+			.col-lg-3
+				.item-contact
+					.icon-img
+						img(src="./img/contact/1.png", alt="")
+					.title-icon Địa chỉ
+					.text-icon 905 Đường 3/2, Phường 7, Quận 11, TP.Hồ Chí Minh
+			.col-lg-3
+				.item-contact
+					.icon-img
+						img(src="./img/contact/2.png", alt="")
+					.title-icon Số điện thoại
+					.text-icon (84-8) 3863 1080
+			.col-lg-3
+				.item-contact
+					.icon-img
+						img(src="./img/contact/3.png", alt="")
+					.title-icon Email
+					.text-icon Winpack.com.vn@gamil.com
+			.col-lg-3
+				.item-contact
+					.icon-img
+						img(src="./img/contact/4.png", alt="")
+					.title-icon Fax
+					.text-icon (84-8) 3862 5707
+
+		.row
+			.col-lg-7
+				.map-wrapper
+					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19896.2391182464!2d106.67608946496217!3d10.772064938675168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f26de7d8973%3A0x8d5075f38e1bf491!2zNTA2LCAxNyBCYSBUaMOhbmcgSGFpLCBwaMaw4budbmcgMTEsIFF14bqtbiAxMCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1590154490382!5m2!1svi!2s',  frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0',width="100%",height="550px")
+
+			.col-lg-5
+				.wrap-form
+					.row
+						.form-group.col-12
+							label(for="") Họ và tên 
+								span *
+							input.form-control(type='text', placeholder="")
+						.form-group.col-12
+							label(for="") Số điện thoại
+								span *
+							input.form-control(type='text',placeholder="")
+						.form-group.col-12
+							label(for="") Email
+								span *
+							input.form-control(type='text',placeholder="")
+						.form-group.col-12
+							label(for="") Tiêu đề
+								span *
+							input.form-control(type='text',placeholder="")
+						.form-group.col-12
+							label(for="") Nội dung
+								span *
+							textarea#inpputTextArea.form-control(rows='3',placeholder="")
+					.frm-btnwrap
+						.frm-btn
+							input(type="submit" value ="GỬI")
