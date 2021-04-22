@@ -1,0 +1,82 @@
+.product-list
+	background: #f0f5f9
+	padding: 70px 0 15px 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0 20px 0
+	.block-title
+		margin-bottom: 20px
+		@media screen and ( max-width: 576px)
+			display: block
+			margin-bottom: 10px
+		.head-title
+			font-size: 18px
+			color: #333
+			@media screen and ( max-width: 576px)
+				text-align: left
+		.item-sort
+			display: flex
+			justify-content: center
+			align-items: center
+			@media screen and ( max-width: 576px)
+				justify-content: left
+				padding-top: 10px
+			.text-sort
+				font-size: 14px
+				color: #333
+				font-weight: 800
+				padding-right: 20px
+				@media screen and ( max-width: 576px)
+					padding-right: 10px
+				@media screen and ( max-width: 380px)
+					padding-right: 5px
+			.select-sort
+				padding-right: 45px
+				@media screen and ( max-width: 576px)
+					padding-right: 20px
+				select
+					padding-left: 15px
+					border: 0
+					width: 170px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: center
+					background: #fff
+					@media screen and ( max-width: 576px)
+						width: max-content
+			.text-render
+				font-size: 14px
+				color: #333
+				font-weight: 800
+				padding-right: 15px
+				@media screen and ( max-width: 380px)
+					padding-right: 5px
+			.select-render
+				select
+					padding-left: 15px
+					border: 0
+					width: 70px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: center
+					background: #fff
+
+	.row
+		margin-right: -5px
+		margin-left: -5px
+		.col
+			flex: 0 0 20%
+			padding: 10px
+			&:first-child
+				padding-left: 5px
+				@media screen and ( max-width: 576px)
+					padding-left: 10px
+			&:last-child
+				padding-right: 5px
+			@media screen and (max-width: 1024px)
+				flex: 0 0 50%
+				padding: 10px
+			@media screen and ( max-width: 576px)
+				flex: 0 0 50%
+				padding: 10px

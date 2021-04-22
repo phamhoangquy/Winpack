@@ -1,0 +1,342 @@
+.product-detail-page
+	.product-detail,.product-detail-3
+		background: #fff
+
+// section 1
+.product-detail
+	padding: 70px 0 60px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0
+	// Slide gallery
+	.gallery-product-detail-slide
+		.gallery-top
+			position: relative
+			.swiper-slide
+				width: 100%
+				height: 480px
+				@media screen and ( max-width: 1024px )
+					height: auto
+				@media screen and ( max-width: 768px )
+					height: auto
+				img
+					width: 100%
+					height: 100%
+		.gallery-thumbs
+			margin-top: 15px
+			padding: 0 22px
+			.swiper-slide
+				padding: 15px
+				overflow: hidden
+				cursor: pointer
+				border: 1px solid #e1e1e1
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					width: 110px
+					height: 78px
+					object-fit: contain
+			.swiper-slide-thumb-active
+				border: 1px solid #da251c
+		.nav-arrow-prev,.nav-arrow-next
+			position: absolute
+			top: 45%
+			display: flex
+			z-index: 5
+			@media screen and ( max-width: 1024px )
+				top: 35%
+			@media screen and ( max-width: 576px )
+				top: 35%
+			em
+				cursor: pointer
+				font-size: 30px
+				color: #999999
+				font-weight: 700
+			&:hover,&:focus
+				em
+					color: #0059b6
+		.nav-arrow-next
+			right: -8px
+		.nav-arrow-prev
+			left: 0
+	// End nút slide
+
+	.item-desc-pro-detail
+		@media screen and ( max-width: 576px)
+			padding-top: 20px
+		.title
+			color: #da251c
+			font-size: 24px
+			font-weight: 600
+			border-bottom: 1px solid #0059b6
+			padding-bottom: 10px
+			@media screen and ( max-width: 576px)
+				font-size: 18px
+		.table-pro-detail
+			padding-top: 10px
+			table
+				width: 100%
+				tbody
+					tr
+						th
+							padding-left: 15px
+							width: 65%
+							color: #333
+							font-size: 16px
+							font-weight: 700
+						td
+							color: #333333
+							height: 50px
+							font-weight: 400
+							font-size: 16px
+							padding-left: 15px
+						&:nth-child(2n)
+							background: #f5f5f5
+
+		.social-network-share
+			display: flex
+			.icon
+				display: flex
+				a
+					display: flex
+					white-space: nowrap
+					margin-right: 5px
+					background: #006cff
+					border-radius: 5px
+					color: #ffffff
+					padding: 3px 5px
+					font-weight: 600
+					font-size: 14px
+					span
+						padding-right: 5px
+				// .fb_iframe_widget
+				// 	span
+				// 		iframe
+				// 			width: 147px !important
+		.bottom-wrapper
+			margin-top: 35px
+			display: flex 
+			align-items: center
+			padding-bottom: 10px
+			@media screen and ( max-width: 576px)
+				margin-top: 15px
+		.brochure
+			a
+				font-size: 16px
+				color: #006cff
+				border-bottom: 1px solid #006cff
+
+// section 2
+.product-detail-2
+	padding: 45px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0
+	
+	.tab-description
+		padding-right: 15px
+		overflow-x: auto
+		ul 
+			list-style: none
+			padding: 0
+			display: flex
+			li
+				a 
+					display: flex
+					align-items: center
+					justify-content: left
+					background: none
+					color: #333333
+					border-bottom: 1px solid #e0e0e0
+					font-size: 18px
+					font-weight: 400
+					padding-bottom: 10px
+					text-transform: uppercase
+					white-space: nowrap
+					@media screen and ( max-width: 576px)
+						font-size: 16px
+						padding-right: 20px
+				&:hover
+					a
+						font-weight: 700
+						border-bottom: 1px solid #0059b6
+				&.active
+					a
+						font-weight: 700
+						border-bottom: 1px solid #0059b6
+			@media screen and ( max-width:576px)
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				li 
+					text-align: center
+
+	article
+		padding-right: 15px
+		@media screen and ( max-width: 576px)
+			padding-right: 0
+		.fullcontent
+			overflow: hidden
+			margin-top: 25px
+			max-height: 400px
+			transition: max-height .5s ease-in-out
+			@media screen and ( max-width: 768px)
+				max-height: 388px
+				margin-top: 15px
+			p
+				padding-bottom: 20px
+				@media screen and ( max-width: 576px)
+					padding-bottom: 15px
+
+		.btn-view-more
+			display: flex
+			align-items: center
+			justify-content: center
+			&.open
+				.view-less-text
+					display: inline-block
+				.view-more-text
+					display: none
+				em 
+					transform: rotate(180deg)
+			span
+				cursor: pointer
+				font-size: 14px
+				color: #0059b6
+				font-weight: 400
+				display: inline-block
+				margin-right: 5px
+				border-bottom: 1px solid #0059b6
+			em
+				color: #0059b6
+	
+	// video
+	.col-lg-5
+		border-left: 1px solid #e0e0e0
+		&.pg
+			padding-left: 20px
+			@media screen and ( max-width: 576px)
+				margin-top: 20px
+	.title
+		font-size: 18px
+		color: #333333
+		font-weight: 700
+		text-transform: uppercase
+		padding-bottom: 15px
+	.figure-video
+		position: relative
+	.wrapper-video
+		position: relative
+		a
+			display: block
+			background: #000
+			height: 100%
+			overflow: hidden
+			img
+				max-width: 100%
+				width: 100%
+				height: 300px
+				background: #000
+				opacity: 0.5
+				object-fit: cover
+	.video
+		z-index: 10
+		position: absolute
+		top: 50%
+		left: 55%
+		transform: translate(-50%,-50%)
+		display: flex
+		justify-content: center
+		align-items: center
+		pointer-events: none
+		.icon
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 65px
+			height: 65px
+			margin:  5px 0
+			@media screen and ( max-width: 1280px )
+				width: 46px
+				margin: 5px auto
+				height: 46px
+			@media screen and ( max-width: 576px )
+				width: 32px
+				margin: 5px auto
+				height: 32px
+			img
+				max-width: 100%
+				height: auto
+				display: block
+				margin: 0 auto !important
+	// end-video
+
+// section 3
+.product-detail-3
+	padding: 40px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0
+	.head-title
+		font-size: 18px
+	.row
+		display: flex
+		justify-content: center
+		align-items: center
+
+// section 4
+.product-detail-4
+	padding: 50px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0
+	.head-title
+		font-size: 24px
+		@media screen and ( max-width: 576px)
+			font-size: 18px
+	.product-other-swiper-wrapper
+		position: relative
+		margin-top: 20px
+		@media screen and ( max-width: 576px)
+			margin-top: 15px
+	.nav-arrow-prev,.nav-arrow-next
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 40%
+		transition: .3s all  ease-in-out
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		em
+			transition: .3s all  ease-in-out
+			color: #999999
+			font-size: 24px
+		&:hover
+			em
+				color: #da251c
+		&:focus
+			outline: none
+	.nav-arrow-next
+		right: -50px
+		@media screen and ( max-width: 1350px)
+			right: 0
+		@media screen and ( max-width: 576px)
+			right: 0
+			
+	.nav-arrow-prev
+		left: -50px
+		@media screen and ( max-width: 1350px)
+			left: 0
+		@media screen and ( max-width: 576px)
+			left: 0
+	.swiper-container
+		margin: 0
+		@media screen and ( max-width: 1350px)
+			margin: 0 50px

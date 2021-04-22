@@ -1,0 +1,24 @@
+section.product-list
+	.container
+		.block-title
+			h1.head-title Máy hàn liên tục
+			.item-sort
+				.text-sort Sắp xếp
+				.select-sort
+					select
+						option(value="option-1")
+							a(href="javascript:void(0)") Từ A đến Z
+				.text-render Hiển thị
+				.select-render
+					select
+						option(value="render-1")
+							a(href="javascript:void(0)") 20
+		.row
+			-for(i=0;i<20;i++)
+				.col
+					.wrapper
+						.card-img.zoom-in
+							a(href="#")
+								img(src="./img/home/h-3.png", alt="")
+						.title
+							a(href="#") Máy dán băng keo thùng carton WP-206
