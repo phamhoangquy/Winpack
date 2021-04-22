@@ -1,0 +1,69 @@
+section.solution-list
+	.container
+		.row
+			.col-lg-3
+				.item-radio
+					.ajaxfilterresponse
+						.radio-list
+							.title-solution Loại bao bì
+							.content-radio
+								ul
+									li.active.checkbox
+										a(href="#").active.ajaxlink Cho bao bì giấy
+									li.checkbox
+										a(href="#").ajaxlink Cho bao thúy tinh
+									li.checkbox
+										a(href="#").ajaxlink Cho bao kim loại
+									li.checkbox
+										a(href="#").ajaxlink Cho bao bì nhựa
+				.item-radio
+					.ajaxfilterresponse
+						.radio-list
+							.title-solution Loại đóng gói
+							.content-radio
+								ul
+									li.active.checkbox
+										a(href="#").active.ajaxlink Sơ cấp
+									li.checkbox
+										a(href="#").ajaxlink Thứ cấp
+									li.checkbox
+										a(href="#").ajaxlink Eol
+
+				.item-radio
+					.ajaxfilterresponse
+						.radio-list
+							.title-solution Loại sản phẩm
+							.content-radio
+								ul
+									li.active.checkbox
+										a(href="#").active.ajaxlink Chất lỏng
+									li.checkbox
+										a(href="#").ajaxlink Bột
+									li.checkbox
+										a(href="#").ajaxlink Hạt
+									li.checkbox
+										a(href="#").ajaxlink Sệt
+
+			.col-lg-9
+				.block-title
+					h1.head-title Giải pháp cho bao bì giấy
+					.item-sort
+						.text-sort Sắp xếp
+						.select-sort
+							select
+								option(value="option-1")
+									a(href="javascript:void(0)") Từ A đến Z
+						.text-render Hiển thị
+						.select-render
+							select
+								option(value="render-1")
+									a(href="javascript:void(0)") 20
+				.row
+					-for(i=0;i<16;i++)
+						.col-6.col-md-6.col-lg-3
+							.wrapper
+								.card-img.zoom-in
+									a(href="#")
+										img(src="./img/home/h-4.png", alt="")
+								.title
+									a(href="#") Máy dán băng keo thùng carton WP-206

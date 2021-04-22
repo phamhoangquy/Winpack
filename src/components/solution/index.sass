@@ -1,0 +1,151 @@
+.solution-list
+	padding: 50px 0 0 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0 0 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0 0 0
+	.title-solution
+		font-size: 18px
+		color: #333
+		font-weight: 800
+		text-transform: uppercase
+		border-bottom: 1px solid #0059b6
+		padding-bottom: 10px
+	
+	.item-radio
+		margin-bottom: 30px
+		@media screen and ( max-width: 576px)
+			margin-bottom: 20px
+		.radio-list
+			background: #ffffff
+			padding: 20px 20px 0
+			.title-solution
+				font-size: 18px
+				color: #333
+				font-weight: 800
+				text-transform: uppercase
+				border-bottom: 1px solid #0059b6
+				padding-bottom: 10px
+			.content-radio
+				padding: 25px 0 0 0
+				@media screen and ( max-width: 576px)
+					padding: 15px 0 0 0
+				ul
+					list-style: none
+					padding: 0
+					li
+						padding-top: 15px
+						padding-bottom: 15px
+						border-bottom: 1px solid #e5e5e5
+						&:first-child
+							padding-top: 0
+						&:last-child
+							border-bottom: 0
+						a
+							display: flex
+							justify-content: flex-start
+							align-items: flex-start
+							font-size: 16px
+							color: #333333
+							font-weight: 600
+							position: relative
+							&::before
+								content: ''
+								font-family: "remixicon"
+								display: block
+								width: 16px
+								height: 16px
+								padding-right: 25px
+								color: #333333
+							&.active
+								&::before
+									content: '\f050'
+									color: #da251c
+							&::before
+								content: '\eb7d'
+						&:hover
+							a
+								color: #da251c
+								&::before
+									content: '\eb7d'
+									color: #da251c
+						&.active
+							a
+								color: #da251c
+								&::before
+									content: '\f050'
+									color: #da251c
+
+	// Right
+	.col-lg-9
+		padding-left: 50px
+		@media screen and ( max-width: 1024px)
+			padding-left: 10px
+	.block-title
+		margin-bottom: 20px
+		@media screen and ( max-width: 576px)
+			display: block
+			margin-bottom: 10px
+		.head-title
+			font-size: 18px
+			color: #333
+			@media screen and ( max-width: 576px)
+				text-align: left
+		.item-sort
+			display: flex
+			justify-content: center
+			align-items: center
+			@media screen and ( max-width: 576px)
+				justify-content: left
+				padding-top: 10px
+			.text-sort
+				font-size: 14px
+				color: #333
+				font-weight: 800
+				padding-right: 20px
+				@media screen and ( max-width: 576px)
+					padding-right: 10px
+				@media screen and ( max-width: 380px)
+					padding-right: 5px
+			.select-sort
+				padding-right: 45px
+				@media screen and ( max-width: 576px)
+					padding-right: 20px
+				select
+					padding-left: 15px
+					border: 0
+					width: 170px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: center
+					background: #fff
+					@media screen and ( max-width: 576px)
+						width: max-content
+			.text-render
+				font-size: 14px
+				color: #333
+				font-weight: 800
+				padding-right: 15px
+				@media screen and ( max-width: 380px)
+					padding-right: 5px
+			.select-render
+				select
+					padding-left: 15px
+					border: 0
+					width: 70px
+					height: 30px
+					display: flex
+					justify-content: center
+					align-items: center
+					background: #fff
+	.col-lg-3
+		margin-bottom: 15px
+
+.solution-page
+	.pages
+		.modulepager
+			.pagination
+				padding-left: 310px
+				@media screen and ( max-width: 1024px)
+					padding-left: 0
