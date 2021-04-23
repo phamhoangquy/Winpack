@@ -50,16 +50,17 @@ header
 				border: 1px solid #e1e1e1
 				input
 					border: 0
-					padding-top: 5px
 					font-style: italic
 					font-size: 14px
 					color: #999999
 					background: transparent
 				button
+					display: flex
+					justify-content: center
+					align-items: center
 					border: 0
 					background-color: unset
 					span
-						font-size: 16px
 						color: #007ec3
 
 			.hotline-box
@@ -102,6 +103,8 @@ header
 			padding-right: 40px
 			@media screen and ( max-width: 1279px)
 				padding-right: 0
+				&:first-child
+					border-bottom: 1px solid #0059b6
 			&:last-child
 				padding-right: 15px
 				border-bottom: 0
@@ -133,8 +136,7 @@ header
 		cursor: pointer
 		color: #999999
 		margin-right: -10px
-		border-left: 1px solid #e5e5e5
-		
+		border-left: 1px solid #f5f5f5
 		a
 			img
 				object-fit: contain
