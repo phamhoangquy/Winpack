@@ -6,10 +6,6 @@ $(document).ready(function() {
     tabActive();
     watchMoreDetail();
     setBackgroundElement();
-    // watch more
-    let totalHeight = 400;
-    $(".content-description .tab-wrapper .fullcontent").css("max-height", totalHeight);
-    // End watch more
 });
 
 // const InsertBd = () => {
@@ -702,6 +698,38 @@ function swiperInit() {
             },
             1440: {
                 slidesPerView: 5,
+            },
+        },
+    });
+
+    var homeBrandSwiper = new Swiper(".about-3 .swiper-container", {
+        // Optional parameters
+        breakpointsInverse: true,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.about-3 .nav-arrow-next',
+            prevEl: '.about-3 .nav-arrow-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 2,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            1025: {
+                slidesPerView: 6,
+            },
+            1440: {
+                slidesPerView: 6,
             },
         },
     });

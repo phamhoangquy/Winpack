@@ -1,0 +1,147 @@
+.about
+	padding: 60px 0 0 0
+	overflow: hidden
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0 0 0
+	@media screen and ( max-width: 576px)
+		padding: 20px 0 0 0
+	.head-title
+		text-align: left
+		padding-top: 35px
+		@media screen and ( max-width: 576px)
+			padding-top: 15px
+	.card-img
+		img
+			max-width: max-content
+			@media screen and ( max-width: 576px)
+				width: 100%
+	.content
+		padding-top: 20px
+		@media screen and ( max-width: 576px)
+			padding-top: 10px
+		p
+			padding-bottom: 20px
+			font-size: 16px
+			color: #333
+			@media screen and ( max-width: 576px)
+				padding-bottom: 10px
+				text-align: justify
+
+// section 2
+.about-2
+	padding: 80px 0 60px 0
+	@media screen and ( max-width: 1024px)
+		padding: 40px 0
+	.row
+		&:nth-child(2n)
+			margin-top: 30px
+			@media screen and ( max-width: 576px)
+				margin-top: 15px
+			.col-lg-6
+				&:nth-child(1)
+					order: 2
+					@media screen and ( max-width: 768px)
+						order: unset
+				.content
+					background: #da251c
+		&:nth-child(2n+1)
+			.col-lg-6
+				.content
+					background: #0059b6
+
+	.col-lg-6
+		padding-left: 0
+		padding-right: 0
+
+
+	.card-img
+		max-width: 100%
+		max-height: 100%
+		width: 100%
+		height: 420px
+		@media screen and ( max-width: 576px)
+			height: auto
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.content
+		height: 420px
+		padding: 95px 80px
+		@media screen and ( max-width: 1024px)
+			padding: 40px
+		@media screen and ( max-width: 576px)
+			padding: 20px
+			height: auto
+		.title-zone
+			font-size: 18px
+			color: #fff
+			text-transform: uppercase
+			font-weight: 600
+		.caption
+			padding-top: 20px
+			font-size: 16px
+			color: #fff
+			font-weight: 400
+			@media screen and ( max-width: 576px)
+				padding-top: 15px
+				text-align: justify
+
+// section 3
+.about-3
+	padding: 45px 0 75px 0
+	@media screen and ( max-width: 1024px)
+		padding: 30px 0
+	.brand-slider-swiper-wrapper
+		position: relative
+		margin-top: 30px
+		@media screen and ( max-width: 1024px)
+			margin-top: 20px
+	.nav-arrow-prev,.nav-arrow-next
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 40%
+		transition: .3s all  ease-in-out
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		em
+			transition: .3s all  ease-in-out
+			color: #999999
+			font-size: 24px
+		&:hover
+			em
+				color: #da251c
+		&:focus
+			outline: none
+	.nav-arrow-next
+		right: -50px
+		@media screen and ( max-width: 1350px)
+			right: 0
+		@media screen and ( max-width: 576px)
+			right: 0
+			
+	.nav-arrow-prev
+		left: -50px
+		@media screen and ( max-width: 1350px)
+			left: 0
+		@media screen and ( max-width: 576px)
+			left: 0
+	.swiper-container
+		margin: 0
+		@media screen and ( max-width: 1350px)
+			margin: 0 50px
+
+	.brand-img
+		border: 1px solid #ebebeb
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 20px
+		cursor: pointer
+		img
+			width: 105px
+			height: 90px
+			object-fit: contain
