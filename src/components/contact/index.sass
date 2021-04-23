@@ -4,7 +4,7 @@
 	@media screen and ( max-width: 1024px)
 		padding: 30px 0
 	@media screen and ( max-width: 576px)
-		padding: 20px 0 25px
+		padding: 20px 0 10px
 	.col-lg-3
 		padding-left: 15px
 		padding-right: 15px
@@ -60,14 +60,18 @@
 					padding-left: 5px
 		.frm-btnwrap
 			width: max-content
-			margin-top: 15px
+			margin-top: 5px
+			@media screen and ( max-width: 576px)
+				margin-top: 0
 			.frm-btn
 				text-align: right
 				margin-right: 15px
-				input
-					padding: 8px 20px
-					@media screen and ( max-width: 576px)
-						margin-left: 15px
+				margin-top: 15px
+				@media screen and ( max-width: 576px)
+					margin-top: 0
+				input[type='submit']
+					width: 150px
+					height: 40px
 		@media(min-width: 768px)
 			.frm-captcha
 				width: 65%
