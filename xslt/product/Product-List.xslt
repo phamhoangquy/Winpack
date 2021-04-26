@@ -15,8 +15,8 @@
 						</div>
 						<div class="text-render">Hiển thị</div>
 						<div class="select-render">
-							<select>
-								<option value="render-1"><a href="javascript:void(0)">20</a></option>
+							<select class="ajaxpageslide">
+								<xsl:apply-templates select="PageSlide"></xsl:apply-templates>
 							</select>
 						</div>
 					</div>
@@ -28,6 +28,19 @@
 		</section>
 	</xsl:template>
 	<xsl:template match="SortBy">
+		<option>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name="selected">
+					<xsl:text>selected</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:attribute name="value">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:value-of select="Title"></xsl:value-of>
+		</option>
+	</xsl:template>
+	<xsl:template match="PageSlide">
 		<option>
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="selected">

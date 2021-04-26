@@ -12,8 +12,8 @@
 .tab-wrapper
 	.tab-item
 		display: none
-		// &.active
-		// 	display: block
+		&.active
+			display: block
 
 
 #wrap-form-popup
@@ -99,5 +99,8 @@
 		button
 			background: #0059b6
 			opacity: 1
+			@media screen and ( max-width: 576px)
+				width: 35px
+				height: 35px
 			svg
 				color: #fff

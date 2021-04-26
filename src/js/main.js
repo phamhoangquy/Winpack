@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 
 function formProductInner() {
-    $('.productpage .product-detail-3').appendTo('#form-inner')
+    $('.product-detail-3').appendTo('#form-inner')
 }
 
 // Tab-Active
@@ -94,7 +94,6 @@ let header = {
     },
 }
 
-
 function toggleMobileMenu() {
     var mega = $('.nav-menu .mega-menu')
     var m_list = $('.menu-list .mega-list')
@@ -160,7 +159,6 @@ function mappingMenu() {
         breakpoint: 1279
     });
 }
-
 
 function swiperInit() {
     var homerSwiper = new Swiper(".home-banner .swiper-container", {

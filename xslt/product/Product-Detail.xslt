@@ -66,37 +66,8 @@
 						</div>
 					</div>
 					<div class="col-lg-5 pg">
-						<div class="title">
-							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-						</div>
-						<div class="figure-video media-play">
-							<div class="wrapper-video">
-								<a>
-									<xsl:attribute name="data-fancybox">
-										<xsl:text>gallery-</xsl:text>
-										<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:attribute name="href">
-										<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:attribute name="title">
-										<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-									</xsl:attribute>
-									<img>
-										<xsl:attribute name="src">
-											<xsl:value-of select="ImageUrl"></xsl:value-of>
-										</xsl:attribute>
-										<xsl:attribute name="alt">
-											<xsl:value-of select="Title"></xsl:value-of>
-										</xsl:attribute>
-									</img>
-								</a>
-							</div>
-							<div class="video">
-								<div class="icon"><img src="/Data/Sites/1/media/img/product/video.png" alt="" /></div>
-							</div>
-						</div>
+						<div class="title">Hoạt động của sản phẩm</div>
+						<xsl:apply-templates select="ProductAttributes" mode="Attr-Video"></xsl:apply-templates>
 					</div>
 				</div>
 			</div>
@@ -174,7 +145,7 @@
 		</li>
 	</xsl:template>
 	<xsl:template match="ProductAttributes" mode="Attr-Content">
-		<div class="tab-item active">
+		<div class="tab-item">
 			<xsl:if test="position()=1">
 				<xsl:attribute name="class">
 					<xsl:text disable-output-escaping="yes">active</xsl:text>
@@ -191,6 +162,33 @@
 					</div>
 					<div class="btn-view-more"><span>Xem Thêm</span><em class="ri-arrow-down-s-line"></em></div>
 				</article>
+			</div>
+		</div>
+	</xsl:template>
+
+	<xsl:template match="ProductAttributes" mode="Attr-Video">
+		<div class="figure-video media-play">
+			<div class="wrapper-video">
+				<a>
+					<xsl:attribute name="data-fancybox">
+						<xsl:text>gallery-</xsl:text>
+						<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="href">
+						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+					</xsl:attribute>
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
+			</div>
+			<div class="video">
+				<div class="icon"><img src="/Data/Sites/1/media/img/product/video.png" alt="" /></div>
 			</div>
 		</div>
 	</xsl:template>
@@ -234,3 +232,4 @@
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
+
