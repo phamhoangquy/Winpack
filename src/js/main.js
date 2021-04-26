@@ -5,12 +5,14 @@ $(document).ready(function() {
     projectDetailSlide();
     tabActive();
     watchMoreDetail();
+    formProductInner();
     setBackgroundElement();
 });
 
-// const InsertBd = () => {
-//     $(".breadcrumb-wrapper").appendTo("#pagebanner .box-text");
-// };
+
+function formProductInner() {
+    $('.productpage .product-detail-3').appendTo('#form-inner')
+}
 
 // Tab-Active
 function tabActive() {
@@ -44,7 +46,7 @@ function watchMoreDetail() {
     watchMore.on("click", function() {
         if ($(this).parents('article').hasClass('active')) {
             cotent.css({
-                "max-height": 385 + "px"
+                "max-height": 400 + "px"
             });
             article.removeClass("active");
             $(this).removeClass('open')

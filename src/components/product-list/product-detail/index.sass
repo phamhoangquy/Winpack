@@ -182,8 +182,10 @@
 		.fullcontent
 			overflow: hidden
 			margin-top: 25px
-			max-height: 400px
+			max-height: 400
 			transition: max-height .5s ease-in-out
+			@media screen and ( max-width: 1440px)
+				max-height: 415px
 			@media screen and ( max-width: 768px)
 				max-height: 388px
 				margin-top: 15px

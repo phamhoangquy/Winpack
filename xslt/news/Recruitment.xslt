@@ -26,9 +26,12 @@
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
+				<xsl:attribute name="target">
+					<xsl:value-of select="Target"></xsl:value-of>
+				</xsl:attribute>
 				<div class="content-jobs-list">
 					<div class="title-jobs">
-						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</div>
 					<xsl:if test="SubTitle != ''">
