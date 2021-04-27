@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-	<xsl:output method="html" indent="yes" />
+<xsl:output method="html" indent="yes"/>
+
 	<xsl:template match="/ProductList">
-		<section class="product-list">
-			<div class="container">
-				<div class="block-title">
-					<h1 class="head-title"><xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of></h1>
-					<div class="item-sort">
-						<div class="text-sort">Sắp xếp</div>
-						<div class="select-sort">
-							<select class="ajaxsort">
-								<xsl:apply-templates select="SortBy"></xsl:apply-templates>
-							</select>
-						</div>
-						<div class="text-render">Hiển thị</div>
-						<div class="select-render">
-							<select class="ajaxpageslide">
-								<xsl:apply-templates select="PageSlide"></xsl:apply-templates>
-							</select>
-						</div>
-					</div>
+		<div class="block-title">
+			<h1 class="head-title"><xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of></h1>
+			<div class="item-sort">
+				<div class="text-sort">Sắp xếp</div>
+				<div class="select-sort">
+					<select class="ajaxsort">
+						<xsl:apply-templates select="SortBy"></xsl:apply-templates>
+					</select>
 				</div>
-				<div class="row ajaxresponsewrap">
-					<xsl:apply-templates select="Product"></xsl:apply-templates>
+				<div class="text-render">Hiển thị</div>
+				<div class="select-render">
+					<select class="ajaxpageslide">
+						<xsl:apply-templates select="PageSlide"></xsl:apply-templates>
+					</select>
 				</div>
 			</div>
-		</section>
+		</div>
+		<div class="row">
+			<xsl:apply-templates select="Product"></xsl:apply-templates>
+		</div>
 	</xsl:template>
 	<xsl:template match="SortBy">
 		<option>
@@ -41,7 +38,7 @@
 		</option>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="col">
+		<div class="col-6 col-md-6 col-lg-3">
 			<div class="wrapper">
 				<div class="card-img zoom-in">
 					<a>

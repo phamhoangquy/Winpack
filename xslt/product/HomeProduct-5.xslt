@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-	<xsl:output method="html" indent="yes" />
-	<xsl:template match="/ProductList">
-		<section class="product-list">
+<xsl:output method="html" indent="yes"/>
+
+	<xsl:template match="/ZoneList">
+		<section class="home_s-5">
 			<div class="container">
 				<div class="block-title">
-					<h1 class="head-title"><xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of></h1>
-					<div class="item-sort">
-						<div class="text-sort">Sắp xếp</div>
-						<div class="select-sort">
-							<select class="ajaxsort">
-								<xsl:apply-templates select="SortBy"></xsl:apply-templates>
-							</select>
-						</div>
-						<div class="text-render">Hiển thị</div>
-						<div class="select-render">
-							<select class="ajaxpageslide">
-								<xsl:apply-templates select="PageSlide"></xsl:apply-templates>
-							</select>
+					<h1 class="head-title"><xsl:value-of disable-output-escaping="yes" select="ModuleTitle"></xsl:value-of></h1>
+					<div class="view-more">
+						<a>
+							<xsl:attribute name="href">
+							<xsl:value-of select="Zone/Url"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Zone/Title"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="target">
+								<xsl:value-of select="Zone/Target"></xsl:value-of>
+							</xsl:attribute>
+							Xem tất cả
+						</a>
+						<span class="ri-arrow-right-line"> </span>
+					</div>
+				</div>
+				<div class="home-slide-5-swiper-wrapper">
+					<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>
+					<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<xsl:apply-templates select="Zone/Product" mode="ZoneProduct"></xsl:apply-templates>
 						</div>
 					</div>
 				</div>
-				<div class="row ajaxresponsewrap">
-					<xsl:apply-templates select="Product"></xsl:apply-templates>
-				</div>
 			</div>
 		</section>
-	</xsl:template>
-	<xsl:template match="SortBy">
-		<option>
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name="selected">
-					<xsl:text>selected</xsl:text>
+		<div class="btn-wrapper">
+			<a class="view-all" href="#">
+				<xsl:attribute name="href">
+					<xsl:value-of select="Zone/Url"></xsl:value-of>
 				</xsl:attribute>
-			</xsl:if>
-			<xsl:attribute name="value">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:value-of select="Title"></xsl:value-of>
-		</option>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Zone/Title"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="target">
+					<xsl:value-of select="Target"></xsl:value-of>
+				</xsl:attribute>
+				Xem thêm
+				<span class="ri-arrow-down-line"></span>
+			</a>
+		</div>
 	</xsl:template>
-	<xsl:template match="Product">
-		<div class="col">
+	<xsl:template match="Product" mode="ZoneProduct">
+		<div class="swiper-slide">
 			<div class="wrapper">
 				<div class="card-img zoom-in">
 					<a>
