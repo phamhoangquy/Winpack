@@ -67,7 +67,9 @@
 					</div>
 					<div class="col-lg-5 pg">
 						<div class="title">Hoạt động của sản phẩm</div>
-						<xsl:apply-templates select="ProductAttributes" mode="Attr-Video"></xsl:apply-templates>
+						<div class="figure-video media-play">
+							<xsl:apply-templates select="ProductAttributes" mode="Attr-Video"></xsl:apply-templates>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -167,30 +169,29 @@
 	</xsl:template>
 
 	<xsl:template match="ProductAttributes" mode="Attr-Video">
-		<div class="figure-video media-play">
-			<div class="wrapper-video">
-				<a>
-					<xsl:attribute name="data-fancybox">
-						<xsl:text>gallery-</xsl:text>
-						<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+		<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
+		<!-- <div class="wrapper-video">
+			<a>
+				<xsl:attribute name="data-fancybox">
+					<xsl:text>gallery-</xsl:text>
+					<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="href">
+					<xsl:value-of disable-output-escaping="yes" select="VideoUrl"></xsl:value-of>
+				</xsl:attribute>
+				<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
-					<xsl:attribute name="href">
-						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-					<img>
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-					</img>
-				</a>
-			</div>
-			<div class="video">
-				<div class="icon"><img src="/Data/Sites/1/media/img/product/video.png" alt="" /></div>
-			</div>
+				</img>
+			</a>
 		</div>
+		<div class="video">
+			<div class="icon"><img src="/Data/Sites/1/media/img/product/video.png" alt="" /></div>
+		</div> -->
 	</xsl:template>
 
 	<xsl:template match="ProductOther">

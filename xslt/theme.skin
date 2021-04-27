@@ -22,6 +22,7 @@
 	ShowAttribute="true"
     ShowSubtitle="true"
     ShowAttachment="true"
+	ShowSecondImage="true"
 	/>
 <portal:DealerDisplaySettings runat="server" 
 	ShowDescription="true"
@@ -32,6 +33,7 @@
     ShowSubTitle="true"
     ShowRelatedProduct="true"
 	ShowAttachment="true"
+	ShowVideo="true"
 	/>
 <portal:SharedFilesDisplaySettings runat="server" 
 	ShowFolder="false"
