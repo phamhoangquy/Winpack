@@ -13,18 +13,23 @@
 					<xsl:text disable-output-escaping="yes">menu-list active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<a class="title-menu-list">
-				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="title">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="target">
-					<xsl:value-of select="Target"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-			</a>
+			<xsl:if test="position()=1">
+				<a href="/"> <span class="ri-home-4-fill"></span></a>
+			</xsl:if>
+			<xsl:if test="position()!=1">
+				<a class="title-menu-list">
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="title">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="target">
+						<xsl:value-of select="Target"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+				</a>
+			</xsl:if>
 		</li>
 	</xsl:template>
 </xsl:stylesheet>

@@ -102,7 +102,6 @@
 				<xsl:attribute name="target">
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>
-				
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
