@@ -118,7 +118,6 @@
                         </asp:ContentPlaceHolder>
                     </asp:Panel>
                 </main>
-
                 <footer>
                     <div class="footer-top">
                         <div class="container">
@@ -177,6 +176,9 @@
                         </div>
                     </div>
                 </footer>
+                <div class="block__tool dekstop">
+                    <portal:modulewrapper id="mdl275" runat="server" configuremoduleid="275" />
+                </div>
             </div>
             <portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
                 <div class="row">
