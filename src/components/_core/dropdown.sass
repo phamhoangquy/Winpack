@@ -77,15 +77,16 @@
 
 		.has-mega-menu
 			width: 100%
-			justify-content: center
+			// justify-content: center
 			flex-wrap: wrap
 			display: flex
+			justify-content: left
 			padding: 0
 			@media screen and ( max-width: 1279px)
 				padding-bottom: 0
 			> li
-				flex: 0 0 100%
-				max-width: 100%
+				flex: 0 0 33%
+				max-width: 33%
 				padding: 0 0 15px 0
 				list-style: none
 				@media screen and ( max-width: 1279px)
@@ -136,6 +137,7 @@
 						@media screen and ( max-width: 1279px)
 							padding-top: 0
 							padding-bottom: 15px
+							border-bottom: 0
 							&:last-child
 								padding-bottom: 15px
 					a
@@ -151,4 +153,4 @@
 			> span
 				display: block
 				font-size: 24px
-				color: #ffffff
+				color: #333
