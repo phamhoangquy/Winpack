@@ -105,6 +105,18 @@ header
 				padding-right: 0
 				&:first-child
 					border-bottom: 1px solid #0059b6
+			&:first-child
+				a
+					position: relative
+					font-size: 0
+					&::before
+						position: absolute
+						content: '\ee1c'
+						font-family: "remixicon"
+						top: 0
+						left: 0
+						font-size: 14px
+						color: #333333
 			&:last-child
 				padding-right: 15px
 				border-bottom: 0
@@ -120,9 +132,13 @@ header
 			&:hover
 				a
 					color: #da251c
+					&::before
+						color: #da251c
 			&.active
 				a
 					color: #da251c
+					&::before
+						color: #da251c
 			.moblie-show-menu
 				a
 					padding: 0

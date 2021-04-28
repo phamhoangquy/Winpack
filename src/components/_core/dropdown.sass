@@ -29,6 +29,7 @@
 					color: #333
 					font-size: 24px
 					display: block
+					cursor: pointer
 
 		.title-menu-list
 			padding: 15px 0 15px 0
@@ -109,17 +110,23 @@
 
 				.img-has-mega
 					padding-bottom: 10px
-
+					a
+						&::before
+							display: none
 				.moblie-show-mega
 					display: flex
 					justify-content: space-between
 					align-items: center
+					@media screen and ( max-width: 1279px)
+						display: none
 					.title-mega
 						color: #da251c
 						position: relative
 						font-size: 14px
 						white-space: nowrap
 						padding-bottom: 5px
+						&::before
+							display: none
 					span
 						color: #ffffff
 						font-size: 24px
@@ -146,6 +153,8 @@
 						font-weight: 400
 						text-transform: unset
 						border-bottom: 1px solid transparent
+						&::before
+							display: none
 						&:hover
 							border-bottom: 1px solid #333
 
