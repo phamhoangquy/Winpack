@@ -16,7 +16,7 @@
 						<div class="text-render">Hiển thị</div>
 						<div class="select-render">
 							<select class="ajaxpageslide">
-								<xsl:apply-templates select="PageSlide"></xsl:apply-templates>
+								<xsl:apply-templates select="PageSize"></xsl:apply-templates>
 							</select>
 						</div>
 					</div>
@@ -34,6 +34,14 @@
 					<xsl:text>selected</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
+			<xsl:attribute name="value">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:value-of select="Title"></xsl:value-of>
+		</option>
+	</xsl:template>
+	<xsl:template match="PageSize">
+		<option>
 			<xsl:attribute name="value">
 				<xsl:value-of select="Url"></xsl:value-of>
 			</xsl:attribute>
