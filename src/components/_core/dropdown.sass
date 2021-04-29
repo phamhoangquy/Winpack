@@ -32,7 +32,7 @@
 					cursor: pointer
 
 		.title-menu-list
-			padding: 15px 0 15px 0
+			padding: 15px 0 25px 0
 
 		@media screen and ( max-width: 1279px)
 			.title-menu-list
@@ -47,7 +47,6 @@
 				opacity: 1
 				visibility: visible
 				transition: 1s all
-
 		.mega-menu
 			position: absolute
 			opacity: 0
@@ -163,3 +162,72 @@
 				display: block
 				font-size: 24px
 				color: #333
+
+		// mega-menu 3,4
+		&:nth-child(4)
+			.mega-menu
+				left: -245%
+				max-width: 930px
+				width: 930px
+				.has-mega-menu
+					li
+						max-width: 25%
+						flex: 0 0 25%
+						border-right: 1px solid #e1e1e1
+						padding-left: 15px
+						padding-right: 15px
+						&:last-child
+							border-right: 0
+						@media screen and ( max-width: 1279px)
+							max-width: 100%
+							flex: 0 0 100%
+						.img-has-mega
+							display: flex
+							justify-content: center
+							align-items: center
+							@media screen and ( max-width: 1279px)
+								justify-content: left
+						.moblie-show-mega
+							display: flex
+							justify-content: center
+							align-items: center
+							@media screen and ( max-width: 1279px)
+								justify-content: space-between
+							.title-mega
+								font-size: 12px
+								color: #333333
+								&:hover
+									color: #da251c
+
+		&:nth-child(5)
+			.mega-menu
+				left: -245%
+				max-width: 780px
+				width: 780px
+				.has-mega-menu
+					li
+						border-right: 1px solid #e1e1e1
+						padding-left: 15px
+						padding-right: 15px
+						&:last-child
+							border-right: 0
+						.img-has-mega
+							display: flex
+							justify-content: center
+							align-items: center
+							@media screen and ( max-width: 1279px)
+								justify-content: left
+						.moblie-show-mega
+							display: flex
+							justify-content: center
+							align-items: center
+							@media screen and ( max-width: 1279px)
+								justify-content: space-between
+							.title-mega
+								font-size: 12px
+								color: #333333
+								white-space: unset
+								text-align: center
+								&:hover
+									color: #da251c
+		// end mega-menu 3,4
