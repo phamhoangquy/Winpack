@@ -92,7 +92,7 @@
 	</xsl:template>
 	<xsl:template match="ProductImages">
 		<div class="swiper-slide">
-			<a class=" ">
+			<a class=" " data-fancybox="">
 				<xsl:attribute name="href">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
@@ -102,6 +102,7 @@
 				<xsl:attribute name="target">
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>
+				
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -135,7 +136,7 @@
 			</xsl:if>
 			<a class="" href="javascript:void(0)">
 				<xsl:attribute name="data-type">
-					<xsl:text disable-output-escaping="yes">#tab-</xsl:text>
+					<xsl:text disable-output-escaping="yes">tab-</xsl:text>
 					<xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
@@ -149,7 +150,7 @@
 		<div class="tab-item">
 			<xsl:if test="position()=1">
 				<xsl:attribute name="class">
-					<xsl:text disable-output-escaping="yes">active</xsl:text>
+					<xsl:text disable-output-escaping="yes">tab-item active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:attribute name="id">

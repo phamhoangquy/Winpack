@@ -15,7 +15,7 @@
 							<div class="bottom-wrapper-news-detail">
 								<div class="icon-detail"><span class="ri-calendar-check-fill"></span>
 									<time>
-										<xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of>
+										<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
 									</time>
 								</div>
 								<div class="social-network-share">

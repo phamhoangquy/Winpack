@@ -738,7 +738,7 @@ function swiperInit() {
 // Slide project-detail
 function projectDetailSlide() {
     var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 60,
+        spaceBetween: 50,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesVisibility: true,

@@ -10,17 +10,17 @@
 					<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<xsl:apply-templates select="Zone/Product" mode="Product"></xsl:apply-templates>
+							<xsl:apply-templates select="Zone" mode="Product"></xsl:apply-templates>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</xsl:template>
-	<xsl:template match="Product" mode="Product">
+	<xsl:template match="Zone" mode="Product">
 		<div class="swiper-slide">
 			<div class="wrapper">
-				<div class="card-img zoom-in">
+				<div class="card-img">
 					<a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>

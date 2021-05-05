@@ -14,17 +14,32 @@
 				</div>
 				<div class="text-render">Hiển thị</div>
 				<div class="select-render">
-					<select class="ajaxpageslide">
-						<xsl:apply-templates select="PageSlide"></xsl:apply-templates>
+					<select class="ajaxpagesize">
+						<xsl:apply-templates select="PageSize"></xsl:apply-templates>
 					</select>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<xsl:apply-templates select="Product"></xsl:apply-templates>
+		<div class="productzone ajaxresponse">
+			<div class="row">
+				<xsl:apply-templates select="Product"></xsl:apply-templates>
+			</div>
 		</div>
 	</xsl:template>
 	<xsl:template match="SortBy">
+		<option>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name="selected">
+					<xsl:text>selected</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:attribute name="value">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:value-of select="Title"></xsl:value-of>
+		</option>
+	</xsl:template>
+	<xsl:template match="PageSize">
 		<option>
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="selected">

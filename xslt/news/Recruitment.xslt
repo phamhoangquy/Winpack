@@ -8,12 +8,16 @@
 				<div class="row">
 					<xsl:apply-templates select="News"></xsl:apply-templates>
 				</div>
-				<xsl:if test="count(News)&gt;6">
-					<a class="big-view" href="javascript:;">
-						Xem thêm
-						<span class="ri-arrow-down-line"></span>
-					</a>
-				</xsl:if>
+				<a class="big-view" href="javascript:;">
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="title">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+					Xem thêm
+					<span class="ri-arrow-down-line"></span>
+				</a>
 			</div>
 		</section>
 	</xsl:template>
@@ -39,7 +43,7 @@
 							<div class="city-jobs">
 								<div class="icon-jobs"><span class="ri-map-pin-2-fill"></span></div>
 								<div class="title-zone-city">
-									<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+									Địa điểm: <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								</div>
 							</div>
 							<div class="money-jobs">
@@ -54,7 +58,7 @@
 						<div class="date">
 							<div class="icon"><span class="ri-calendar-check-fill"></span></div>
 							<time>
-								<xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of>
+								Hạn nộp : <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
 							</time>
 						</div>
 						<div class="amount">
