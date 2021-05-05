@@ -14,9 +14,7 @@
 							</h1>
 							<div class="bottom-wrapper-news-detail">
 								<div class="icon-detail"><span class="ri-calendar-check-fill"></span>
-									<time>
-										<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
-									</time>
+									<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 								</div>
 								<div class="social-network-share">
 									<div class="icon">
@@ -140,13 +138,13 @@
 							<div class="city-jobs">
 								<div class="icon-jobs"><span class="ri-map-pin-2-fill"></span></div>
 								<div class="title-zone-city">
-									<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+									Địa điểm: <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								</div>
 							</div>
 							<div class="money-jobs">
 								<div class="icon-jobs"><span class="ri-money-dollar-circle-fill"></span></div>
 								<div class="title-zone-money">
-									<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+									Mức lương: <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 								</div>
 							</div>
 						</div>
@@ -155,7 +153,7 @@
 						<div class="date">
 							<div class="icon"><span class="ri-calendar-check-fill"></span></div>
 							<time>
-								<xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of>
+								Hạn nộp: <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
 							</time>
 						</div>
 						<div class="amount">

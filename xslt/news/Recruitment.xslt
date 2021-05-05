@@ -49,7 +49,7 @@
 							<div class="money-jobs">
 								<div class="icon-jobs"><span class="ri-money-dollar-circle-fill"></span></div>
 								<div class="title-zone-money">
-									<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+									Mức lương: <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 								</div>
 							</div>
 						</div>
