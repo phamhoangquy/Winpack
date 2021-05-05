@@ -17,12 +17,16 @@
 				width: 100%
 	.content
 		padding-top: 20px
+		padding-right: 40px
+		@media screen and ( max-width: 768px)
+			padding-right: 0
 		@media screen and ( max-width: 576px)
 			padding-top: 10px
 		p
 			padding-bottom: 20px
 			font-size: 16px
 			color: #333
+			font-weight: 500
 			@media screen and ( max-width: 576px)
 				padding-bottom: 10px
 				text-align: justify
@@ -47,12 +51,17 @@
 		&:nth-child(2n+1)
 			.col-lg-6
 				.content
+					padding: 95px 80px 95px 50px
 					background: #0059b6
+					@media screen and ( max-width: 1024px)
+						padding: 40px
+					@media screen and ( max-width: 576px)
+						padding: 20px
+						height: auto
 
 	.col-lg-6
 		padding-left: 0
 		padding-right: 0
-
 
 	.card-img
 		max-width: 100%

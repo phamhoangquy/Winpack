@@ -40,9 +40,7 @@
 			</div>
 			<div class="content">
 				<div class="date">
-					<time>
-						<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
-					</time>
+					<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 				</div>
 				<div class="title">
 					<a>
@@ -86,7 +84,7 @@
 				</div>
 				<div class="content">
 					<div class="date">
-						<time><xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of></time>
+						<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 					</div>
 					<div class="title">
 						<a>
@@ -128,7 +126,7 @@
 				</div>
 				<div class="content">
 					<div class="date">
-						<time><xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of></time>
+						<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 					</div>
 					<div class="title">
 						<a>

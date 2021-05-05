@@ -13,12 +13,7 @@
 							</h1>
 							<div class="bottom-wrapper-news-detail">
 								<time>
-									<xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
-									<!-- <xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>
-									.
-									<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>
-									.
-									<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of> -->
+									<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 								</time>
 								<div class="social-network-share">
 									<div class="icon">

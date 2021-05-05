@@ -6,6 +6,7 @@ $(document).ready(function() {
     tabActive();
     watchMoreDetail();
     formProductInner();
+    filterCate();
     setBackgroundElement();
 });
 
@@ -92,6 +93,36 @@ let header = {
             $('header').removeClass('active')
         }
     },
+}
+
+function filterCate() {
+    $('.tool-product').prependTo('.solution-page main .product-list .container');
+    var cate_menu = $('.item-product-list')
+    var filter_menu = $('.item-radio')
+    var tool = $('.tool-product')
+    var cate = $('.tool-product .btn-cate')
+    var filter = $('.tool-product .btn-filter')
+    var close = $('#cls_filter')
+    var close_2 = $('#cls_filter-2')
+    setTimeout(() => {
+        var header = $("header").outerHeight();
+        cate_menu.css("top", header);
+        filter_menu.css("top", header);
+    }, 100);
+    cate.on('click', function() {
+        cate_menu.toggleClass('active')
+        filter_menu.removeClass('active')
+    });
+    filter.on('click', function() {
+        filter_menu.toggleClass('active')
+        cate_menu.removeClass('active')
+    });
+    close.on('click', function() {
+        cate_menu.removeClass('active')
+    });
+    close_2.on('click', function() {
+        filter_menu.removeClass('active')
+    });
 }
 
 function toggleMobileMenu() {

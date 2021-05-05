@@ -11,13 +11,13 @@
 				</div>
 				<a class="view-more" href="#">
 					<xsl:attribute name="href">
-						<xsl:value-of select="Url"></xsl:value-of>
+						<xsl:value-of select="Zone/Url"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="title">
-						<xsl:value-of select="Title"></xsl:value-of>
+						<xsl:value-of select="Zone/Title"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="target">
-						<xsl:value-of select="Target"></xsl:value-of>
+						<xsl:value-of select="Zone/Target"></xsl:value-of>
 					</xsl:attribute>
 					Xem thêm
 					<span class="ri-arrow-right-line"></span>
@@ -48,9 +48,7 @@
 				</div>
 				<div class="content">
 					<div class="date">
-						<time>
-							<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
-						</time>
+						<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
 					</div>
 					<div class="title">
 						<a>

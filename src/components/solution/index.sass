@@ -12,13 +12,137 @@
 		border-bottom: 1px solid #0059b6
 		padding-bottom: 10px
 	
+	.item-product-list
+		background-color: #fff
+		// box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1)
+		margin-bottom: 30px
+		@media screen and ( max-width: 768px )
+			visibility: hidden
+			transform: translateY(30px)
+			opacity: 0
+			position: fixed
+			bottom: 0px
+			left: 0
+			right: 0
+			z-index: 11
+			margin-bottom: 40px
+			overflow: auto
+			background-color: white
+			transition: .3s all  ease-in-out
+			padding-bottom: 30px
+			&::-webkit-scrollbar
+				width: 3px
+				height: 3px
+			&::-webkit-scrollbar-thumb
+				border-radius: 2.5px
+				// background-color: red
+			&.active
+				visibility: visible
+				opacity: 1
+				transform: translate(0)
+			.choose-product
+				padding-bottom: 40px
+		.sub-title-product
+			padding: 15px 20px
+			background: #0059b6
+			h2
+				color: #ffffff
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+		.content
+			padding: 20px
+			ul
+				list-style: none
+				padding: 0
+				li
+					padding-top: 15px
+					padding-bottom: 15px
+					border-bottom: 1px solid #e5e5e5
+					&:first-child
+						padding-top: 0
+					&:last-child
+						border-bottom: 0
+					.title-zone
+						cursor: pointer
+						display: flex
+						justify-content: space-between
+						a
+							color: #333333
+							font-size: 15px
+							font-weight: 600
+							display: block
+							width: 100% 
+							@media(max-width: 576px)
+								&.active
+									color: #da251c
+						span
+							color: #666666
+							font-size: 15px
+						&:hover
+							a
+								color: #da251c
+							span
+								color: #da251c
+						&.active
+							a
+								color: #da251c
+							span
+								color: #da251c
+					.sub-product
+						padding-left: 15px
+						&:last-child
+							.sub-has-dropdown
+								padding-bottom: 0
+						.sub-has-dropdown
+							padding-top: 15px
+							border-bottom: 0
+							a
+								font-size: 14px
+								font-weight: 500
+								color: #666666
+							&.active
+								a
+									color: #da251c
+							&:hover
+								a
+									color: #da251c
+					&.has-dropdown
+						.sub-product
+							display: none
+
 	.item-radio
 		margin-bottom: 30px
+		@media screen and ( max-width: 768px )
+			visibility: hidden
+			transform: translateY(30px)
+			opacity: 0
+			position: fixed
+			bottom: 0px
+			left: 0
+			right: 0
+			z-index: 11
+			margin-bottom: 40px
+			overflow: auto
+			background-color: white
+			transition: .3s all  ease-in-out
+			padding-bottom: 30px
+			&::-webkit-scrollbar
+				width: 3px
+				height: 3px
+			&::-webkit-scrollbar-thumb
+				border-radius: 2.5px
+				background-color: #0059b6
+			&.active
+				visibility: visible
+				opacity: 1
+				transform: translate(0)
 		@media screen and ( max-width: 576px)
 			margin-bottom: 20px
 		.radio-list
 			background: #ffffff
 			padding: 20px 20px 0
+			margin-bottom: 30px
 			.title-solution
 				font-size: 18px
 				color: #333
@@ -135,6 +259,58 @@
 					background: #fff
 	.col-lg-3
 		margin-bottom: 15px
+
+#cls_filter, #cls_filter-2
+	display: none
+	@media screen and ( max-width: 768px)
+		display: block
+		text-align: center
+		font-size: 16px
+		color: #fff
+		width: 145px
+		height: 40px
+		background-image: linear-gradient(to right, #52a23c 0%, #b8d86f 100%)
+		padding-top: 10px
+		margin: auto
+		border-radius: 20px
+		cursor: pointer
+#cls_filter
+	display: none !important
+.tool-product
+	display: none
+	@media screen and ( max-width: 768px )
+		display: block
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 10
+		font-size: r(16px)
+		font-weight: 400
+		cursor: pointer
+		.wrapper-tool
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.btn-cate,.btn-filter
+				background: #0059b6
+				color: #ffffff
+		.btn
+			min-height: 40px
+			flex: 1
+			display: flex
+			padding: 0.5rem 1rem
+			justify-content: center
+			align-items: center
+			border: thin solid #cccccc
+			background-color: white
+			box-shadow: 0px 0px 15px #0000000b
+			white-space: nowrap
+			font-weight: 700
+			span
+				margin-right: 10px
+				@media screen and ( max-width: 375px )
+					margin-right: 5px
 
 .solution-page
 	.pages

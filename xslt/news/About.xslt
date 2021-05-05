@@ -17,6 +17,7 @@
 				<xsl:apply-templates select="Zone[2]/News" mode="News-About-2"></xsl:apply-templates>
 			</div>
 		</section>
+
 		<section class="about-3">
 			<div class="container">
 				<h2 class="head-title"><xsl:value-of select="Zone[3]/Title" disable-output-escaping="yes"></xsl:value-of></h2>
@@ -32,6 +33,7 @@
 			</div>
 		</section>
 	</xsl:template>
+	
 	<xsl:template match="News" mode="News-About-1">
 		<div class="col-lg-6">
 			<h1 class="head-title"><xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of></h1>
@@ -52,6 +54,7 @@
 			</div>
 		</div>
 	</xsl:template>
+
 	<xsl:template match="News" mode="News-About-2">
 		<div class="row">
 			<div class="col-lg-6"> 
@@ -74,6 +77,7 @@
 			</div>
 		</div>
 	</xsl:template>
+
 	<xsl:template match="News" mode="News-About-3">
 		<div class="swiper-slide">
 			<div class="brand-img zoom-in">
