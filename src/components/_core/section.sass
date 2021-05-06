@@ -78,6 +78,8 @@
 				.headtitle
 					color: #333
 					text-align: center
+					text-transform: uppercase
+					font-size: 18px
 				.form-group
 					.panel
 						.panel-heading
@@ -90,23 +92,33 @@
 							.form-group
 								display: flex
 								align-items: center
+								padding-top: 10px
 								margin-bottom: 15px
 								&.forget
 									label
 										padding-top: 2px
 										padding-left: 5px
+										font-size: 14px
 								input[type="text"],input[type="password"]
 									width: 100%
 									height: 40px
 									border: 1px solid #e0e0e0
 									margin-left: 10px
 									padding-left: 15px
+									font-size: 14px
+									&::placeholder
+										font-size: 14px
 								input[type="submit"]
 									border: 0
 									background: #004995
 									color: #fff
 									width: 100px
 									height: 35px
+									font-size: 14px
+									margin-left: auto
+									margin-right: auto
+									&::placeholder
+										font-size: 14px
 									&:hover
 										background: #da251c
 								#ctl00_mainContent_login1_LoginCtrl_lnkPasswordRecovery
@@ -120,6 +132,8 @@
 									color: #333
 									&:hover
 										color: #da251c
+				.alert
+					color: red
 
 // passwordrecovery
 .passwordrecovery
@@ -139,13 +153,17 @@
 			@media screen and ( max-width: 1023px)
 				width: 100%
 			.panel-heading
-				color: #333
-				text-align: center
+				h1
+					color: #333
+					text-align: center
+					font-size: 18px
+					text-transform: uppercase
 		.form-horizontal
 			.form-group
 				label
 					padding-top: 10px
 					max-width: 100%
+					font-size: 14px
 				.col-sm-offset-3
 					padding-top: 20px
 				.col-sm-offset-3,.col-sm-9
@@ -195,12 +213,15 @@
 			.headtitle
 				color: #333
 				text-align: center
+				text-transform: uppercase
+				font-size: 18px
 			#ctl00_mainContent_pnlRegisterWrapper
 				margin-top: 10px
 				.form-horizontal
 					.form-group
 						label
 							margin: 10px 0
+							font-size: 14px
 						input
 							height: 35px
 							border: 1px solid #e0e0e0
@@ -209,6 +230,10 @@
 							height: 40px
 							border: 1px solid #e0e0e0
 							width: 100%
+						.settingcontrol
+							.fa-exclamation-triangle
+								font-size: 12px
+								color: red
 			table
 				tbody
 					tr
