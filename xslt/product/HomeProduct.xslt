@@ -3,7 +3,7 @@
 <xsl:output method="html" indent="yes"/>
 
 	<xsl:template match="/ZoneList">
-		<section class="home_s-1">
+		<section class="home_s-1" data-aos="fade-up">
 			<div class="container">
 				<div class="home-slide-1-swiper-wrapper">
 					<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>

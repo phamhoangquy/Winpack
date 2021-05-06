@@ -3,7 +3,7 @@
 <xsl:output method="html" indent="yes"/>
 
 	<xsl:template match="/ZoneList">
-		<section class="home_s-3">
+		<section class="home_s-3" data-aos="fade-up">
 			<div class="container">
 				<div class="block-title">
 					<h1 class="head-title"><xsl:value-of disable-output-escaping="yes" select="ModuleTitle"></xsl:value-of></h1>

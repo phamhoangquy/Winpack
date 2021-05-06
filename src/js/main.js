@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    AOS.init({
+        disable: "mobile",
+        duration: 1500,
+        easing: 'ease-in-sine',
+    })
     mappingMenu();
     toggleMobileMenu();
     swiperInit();
