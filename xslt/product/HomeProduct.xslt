@@ -19,7 +19,7 @@
 	</xsl:template>
 	<xsl:template match="Zone" mode="Product">
 		<div class="swiper-slide">
-			<div class="wrapper">
+			<div class="wrapper zoom-in">
 				<div class="card-img">
 					<a>
 						<xsl:attribute name="href">
