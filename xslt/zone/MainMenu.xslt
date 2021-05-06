@@ -10,6 +10,11 @@
 		<xsl:choose>
 			<xsl:when test="position()=3">
 				<li class="menu-list">
+					<xsl:if test="IsActive = 'true'">
+						<xsl:attribute name="class">
+							<xsl:text disable-output-escaping="yes">menu-list active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<div class="moblie-show-menu">
 						<a class="title-menu-list">
 							<xsl:attribute name="href">
@@ -77,6 +82,11 @@
 
 			<xsl:when test="position()=4">
 				<li class="menu-list">
+					<xsl:if test="IsActive = 'true'">
+						<xsl:attribute name="class">
+							<xsl:text disable-output-escaping="yes">menu-list active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<div class="moblie-show-menu">
 						<a class="title-menu-list">
 							<xsl:attribute name="href">
@@ -105,6 +115,11 @@
 			
 			<xsl:when test="position()=5">
 				<li class="menu-list">
+					<xsl:if test="IsActive = 'true'">
+						<xsl:attribute name="class">
+							<xsl:text disable-output-escaping="yes">menu-list active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<div class="moblie-show-menu">
 						<a class="title-menu-list">
 							<xsl:attribute name="href">

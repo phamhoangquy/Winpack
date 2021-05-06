@@ -33,7 +33,8 @@
 
 		.title-menu-list
 			padding: 15px 0 25px 0
-
+			@media screen and ( max-width: 1279px)
+				padding: 15px 0
 		@media screen and ( max-width: 1279px)
 			.title-menu-list
 				&:hover
@@ -126,6 +127,9 @@
 						padding-bottom: 5px
 						&::before
 							display: none
+						@media screen and ( max-width: 1279px)
+							&:last-child
+								padding-bottom: 15px
 					span
 						color: #ffffff
 						font-size: 24px
@@ -146,16 +150,17 @@
 							border-bottom: 0
 							&:last-child
 								padding-bottom: 15px
-					a
-						color: #333
-						font-size: 14px
-						font-weight: 400
-						text-transform: unset
-						border-bottom: 1px solid transparent
-						&::before
-							display: none
-						&:hover
-							border-bottom: 1px solid #333
+						a
+							color: #333
+							font-size: 14px
+							font-weight: 400
+							text-transform: unset
+							border-bottom: 1px solid transparent
+							font-size: unset !important
+							&::before
+								display: none
+							&:hover
+								border-bottom: 1px solid #333
 
 		@media screen and ( max-width: 1279px )
 			> span
