@@ -30,7 +30,7 @@
 				</xsl:attribute>
 			</xsl:if>
 			<div class="title-zone">
-				<a class="ajaxlink">
+				<a class="">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
