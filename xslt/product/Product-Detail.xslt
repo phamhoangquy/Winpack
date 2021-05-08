@@ -6,7 +6,7 @@
 		<section class="product-detail">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-7">
 						<div class="gallery-product-detail-slide">
 							<div class="swiper-container gallery-top">
 								<div class="swiper-wrapper">
@@ -22,7 +22,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-5">
 						<div class="item-desc-pro-detail">
 							<div class="title">
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -34,17 +34,28 @@
 							<div class="bottom-wrapper">
 								<div class="social-network-share">
 									<div class="icon">
-										<a href="#">
-											<span class="ri-thumb-up-fill"></span>
-											<div class="text">Thích</div>
-										</a>
-										<a href="#">
-											<div class="text">Chia sẻ</div>
-										</a>
+										<div class="fb-like" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true">
+											<xsl:attribute name="data-href">
+												<xsl:value-of select="FullUrl" disable-output-escaping="yes"></xsl:value-of>
+											</xsl:attribute>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="brochure"><a href="#">Download brochure sản phẩm </a></div>
+							<div class="brochure">
+								<a href="" download="">
+									<xsl:attribute name="href">
+										<xsl:value-of select="FileUrl"></xsl:value-of>
+									</xsl:attribute>
+									<xsl:attribute name="title">
+										<xsl:value-of select="Title"></xsl:value-of>
+									</xsl:attribute>
+									<xsl:attribute name="target">
+										<xsl:value-of select="Target"></xsl:value-of>
+									</xsl:attribute>
+									<xsl:text disable-output-escaping="yes">Download brochure sản phẩm</xsl:text> 
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -14,7 +14,7 @@
 				</div>
 				<div class="text-render">Hiển thị</div>
 				<div class="select-render">
-					<select class="ajaxpagesize">
+					<select class="ajaxsort">
 						<xsl:apply-templates select="PageSize"></xsl:apply-templates>
 					</select>
 				</div>
