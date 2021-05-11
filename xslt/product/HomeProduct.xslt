@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
-
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
 		<section class="home_s-1" data-aos="fade-up">
 			<div class="container">
 				<div class="home-slide-1-swiper-wrapper">
-					<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>
-					<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<xsl:apply-templates select="Zone" mode="Product"></xsl:apply-templates>
+						</div>
+					</div>
+					<div class="wrap-button">
+						<div class="nav-arrow-prev">
+							<em class="material-icons">arrow_back_ios_new</em>
+						</div>
+						<div class="nav-arrow-next">
+							<em class="material-icons">arrow_forward_ios</em>
 						</div>
 					</div>
 				</div>

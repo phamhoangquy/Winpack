@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
-
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ProductDetail">
 		<section class="product-detail">
 			<div class="container">
@@ -17,8 +16,12 @@
 								<div class="swiper-wrapper">
 									<xsl:apply-templates select="ProductImages" mode="Thumbnail"></xsl:apply-templates>
 								</div>
-								<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>
-								<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
+								<div class="nav-arrow-prev">
+									<em class="material-icons">arrow_back_ios</em>
+								</div>
+								<div class="nav-arrow-next">
+									<em class="material-icons">arrow_forward_ios</em>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -53,7 +56,7 @@
 									<xsl:attribute name="target">
 										<xsl:value-of select="Target"></xsl:value-of>
 									</xsl:attribute>
-									<xsl:text disable-output-escaping="yes">Download brochure sản phẩm</xsl:text> 
+									<xsl:text disable-output-escaping="yes">Download brochure sản phẩm</xsl:text>
 								</a>
 							</div>
 						</div>
@@ -77,9 +80,12 @@
 						</div>
 					</div>
 					<div class="col-lg-5 pg">
-						<div class="title">Hoạt động của sản phẩm</div>
-						<div class="figure-video media-play">
-							<xsl:apply-templates select="ProductAttributes" mode="Attr-Video"></xsl:apply-templates>
+						<div class="box-hoat-dong-sp">
+							<div class="title">Hoạt động của sản phẩm</div>
+							<div class="figure-video media-play">
+								<xsl:apply-templates select="ProductVideos"></xsl:apply-templates>
+								<!-- <xsl:apply-templates select="ProductAttributes" mode="Attr-Video"></xsl:apply-templates> -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -90,8 +96,12 @@
 			<div class="container">
 				<h2 class="head-title">Sản phẩm khác</h2>
 				<div class="product-other-swiper-wrapper">
-					<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>
-					<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
+					<div class="nav-arrow-prev">
+						<em class="material-icons">arrow_back_ios</em>
+					</div>
+					<div class="nav-arrow-next">
+						<em class="material-icons">arrow_forward_ios</em>
+					</div>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<xsl:apply-templates select="ProductOther"></xsl:apply-templates>
@@ -113,7 +123,6 @@
 				<xsl:attribute name="target">
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>
-				
 				<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -137,7 +146,6 @@
 			</img>
 		</div>
 	</xsl:template>
-
 	<xsl:template match="ProductAttributes" mode="Attr-Tab">
 		<li>
 			<xsl:if test="position()=1">
@@ -173,15 +181,16 @@
 					<div class="fullcontent">
 						<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
 					</div>
-					<div class="btn-view-more"><span>Xem Thêm</span><em class="ri-arrow-down-s-line"></em></div>
+					<div class="btn-view-more">
+						<span>Xem Thêm</span>
+						<em class="ri-arrow-down-s-line"></em>
+					</div>
 				</article>
 			</div>
 		</div>
 	</xsl:template>
-
-	<xsl:template match="ProductAttributes" mode="Attr-Video">
-		<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
-		<!-- <div class="wrapper-video">
+	<xsl:template match="ProductVideos">
+		<div class="wrapper-video">
 			<a>
 				<xsl:attribute name="data-fancybox">
 					<xsl:text>gallery-</xsl:text>
@@ -192,7 +201,7 @@
 				</xsl:attribute>
 				<img>
 					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
+						<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
 						<xsl:value-of select="Title"></xsl:value-of>
@@ -201,10 +210,11 @@
 			</a>
 		</div>
 		<div class="video">
-			<div class="icon"><img src="/Data/Sites/1/media/img/product/video.png" alt="" /></div>
-		</div> -->
+			<div class="icon">
+				<img src="/Data/Sites/1/media/img/product/video.png" alt="" />
+			</div>
+		</div>
 	</xsl:template>
-
 	<xsl:template match="ProductOther">
 		<div class="swiper-slide">
 			<div class="wrapper">
@@ -244,4 +254,3 @@
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
-

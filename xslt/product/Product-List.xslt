@@ -5,7 +5,9 @@
 		<section class="product-list">
 			<div class="container">
 				<div class="block-title">
-					<h1 class="head-title"><xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of></h1>
+					<h1 class="head-title">
+						<xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of>
+					</h1>
 					<div class="item-sort">
 						<div class="text-sort">Sắp xếp</div>
 						<div class="select-sort">
@@ -15,7 +17,7 @@
 						</div>
 						<div class="text-render">Hiển thị</div>
 						<div class="select-render">
-							<select class="ajaxpagesize">
+							<select class="ajaxsort">
 								<xsl:apply-templates select="PageSize"></xsl:apply-templates>
 							</select>
 						</div>

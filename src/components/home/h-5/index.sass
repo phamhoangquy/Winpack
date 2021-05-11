@@ -12,13 +12,15 @@
 		width: 40px
 		height: 40px
 		top: 40%
-		transition: .3s all  ease-in-out
+		transition: .3s all ease-in-out
 		cursor: pointer
 		display: flex
 		justify-content: center
 		align-items: center
+		@media screen and ( max-width: 1350px )
+			position: static
 		em
-			transition: .3s all  ease-in-out
+			transition: .3s all ease-in-out
 			color: #999999
 			font-size: 24px
 		&:hover
@@ -32,7 +34,7 @@
 			right: 0
 		@media screen and ( max-width: 576px)
 			right: 0
-			
+
 	.nav-arrow-prev
 		left: -50px
 		@media screen and ( max-width: 1350px)
@@ -41,5 +43,3 @@
 			left: 0
 	.swiper-container
 		margin: 0
-		@media screen and ( max-width: 1350px)
-			margin: 0 50px

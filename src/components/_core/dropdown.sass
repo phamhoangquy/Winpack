@@ -9,9 +9,8 @@
 		display: none
 	.menu-list
 		list-style: none
-		// width: auto !important
 		position: relative
-		> span 
+		> span
 			display: none
 		@media screen and ( max-width: 1279px)
 			display: flex
@@ -44,15 +43,15 @@
 
 		&:hover
 			.mega-menu
-				top: 39px
+				top: 41px
 				opacity: 1
 				visibility: visible
-				transition: 1s all
+				// transition: 1s all
 		.mega-menu
 			position: absolute
 			opacity: 0
 			left: 0
-			top: 39px
+			top: 60px
 			z-index: 9
 			background-color: #fff
 			opacity: 0
@@ -60,6 +59,7 @@
 			visibility: hidden
 			width: 760px
 			max-width: 760px
+			transition: .3s all ease-in-out
 			@media screen and ( max-width: 1279px)
 				position: static
 				padding: 0 15px
@@ -71,7 +71,7 @@
 				justify-content: flex-start
 				flex-wrap: nowrap
 				background: none
-			
+
 			.container
 				padding-left: 0
 				padding-right: 0
@@ -105,7 +105,7 @@
 						padding-bottom: 0
 						border-bottom: 0
 						padding-top: 0
-					& + li 
+					& + li
 						margin-top: 0
 
 				.img-has-mega
@@ -170,6 +170,21 @@
 
 		// mega-menu 3,4
 		&:nth-child(4)
+
+			.moblie-show-mega
+				position: relative
+				width: fit-content
+				margin: 0 auto
+				&::before
+					content: ''
+					position: absolute
+					top: 100%
+					left: 50%
+					width: 0%
+					height: 2px
+					transition: .3s all ease-in-out
+					transform: translateX(-50%)
+					background-color: #da251c
 			.mega-menu
 				left: -245%
 				max-width: 930px
@@ -181,6 +196,14 @@
 						border-right: 1px solid #e1e1e1
 						padding-left: 15px
 						padding-right: 15px
+						&:hover
+							img
+								transform: scale(1.05)
+							.moblie-show-mega
+								.title-mega
+									color: #da251c
+								&::before
+									width: 100%
 						&:last-child
 							border-right: 0
 						@media screen and ( max-width: 1279px)
@@ -190,19 +213,31 @@
 							display: flex
 							justify-content: center
 							align-items: center
+							a
+								width: 170px
+								height: 170px
+								border-radius: 50%
+								overflow: hidden
+								img
+									width: 100%
+									height: 100%
+									object-fit: cover
+									transition: .3s all ease-in-out
 							@media screen and ( max-width: 1279px)
 								justify-content: left
 						.moblie-show-mega
 							display: flex
 							justify-content: center
 							align-items: center
+							position: relative
+
 							@media screen and ( max-width: 1279px)
 								justify-content: space-between
 							.title-mega
-								font-size: 12px
+								font-size: r(12px)
 								color: #333333
-								&:hover
-									color: #da251c
+								position: relative
+								text-align: center
 
 		&:nth-child(5)
 			.mega-menu

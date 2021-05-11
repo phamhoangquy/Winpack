@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
-
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/NewsDetail">
 		<section class="recruitment-detail">
 			<div class="container">
@@ -10,11 +9,16 @@
 						<div class="card-title">
 							<h1>
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>	
+								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 							</h1>
 							<div class="bottom-wrapper-news-detail">
-								<div class="icon-detail"><span class="ri-calendar-check-fill"></span>
-									<time><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of></time>
+								<div class="icon-detail">
+									<span class="ri-calendar-check-fill"></span>
+									<time>
+										<xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>.
+										<xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of>.
+										<xsl:value-of select="CreatedYYYY" disable-output-escaping="yes"></xsl:value-of>
+									</time>
 								</div>
 								<div class="social-network-share">
 									<div class="icon">
@@ -57,7 +61,6 @@
 											Tải hồ sơ mẫu
 										</a>
 									</div>
-								
 								</div>
 								<div class="form-apply" id="form-apply" style="display: none">
 									<iframe>
@@ -76,11 +79,17 @@
 			<div class="container">
 				<h2 class="head-title">Tuyển dụng khác</h2>
 				<div class="other-slide-swiper-wrapper">
-					<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>
-					<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
 							<xsl:apply-templates select="NewsOther"></xsl:apply-templates>
+						</div>
+					</div>
+					<div class="wrap-arrow-bt">
+						<div class="nav-arrow-prev">
+							<em class="material-icons">arrow_back_ios_new</em>
+						</div>
+						<div class="nav-arrow-next">
+							<em class="material-icons">arrow_forward_ios</em>
 						</div>
 					</div>
 				</div>
@@ -115,7 +124,6 @@
 			<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
 		</div>
 	</xsl:template>
-
 	<xsl:template match="NewsOther">
 		<div class="swiper-slide">
 			<a>
@@ -136,30 +144,42 @@
 					<xsl:if test="SubTitle != ''">
 						<div class="top-jobs">
 							<div class="city-jobs">
-								<div class="icon-jobs"><span class="ri-map-pin-2-fill"></span></div>
+								<div class="icon-jobs">
+									<span class="ri-map-pin-2-fill"></span>
+								</div>
 								<div class="title-zone-city">
-									Địa điểm: <xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+									Địa điểm:
+									<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								</div>
 							</div>
 							<div class="money-jobs">
-								<div class="icon-jobs"><span class="ri-money-dollar-circle-fill"></span></div>
+								<div class="icon-jobs">
+									<span class="ri-money-dollar-circle-fill"></span>
+								</div>
 								<div class="title-zone-money">
-									Mức lương: <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+									Mức lương:
+									<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 								</div>
 							</div>
 						</div>
 					</xsl:if>
 					<div class="bottom-jobs">
 						<div class="date">
-							<div class="icon"><span class="ri-calendar-check-fill"></span></div>
+							<div class="icon">
+								<span class="ri-calendar-check-fill"></span>
+							</div>
 							<time>
-								Hạn nộp: <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
+								Hạn nộp:
+								<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
 							</time>
 						</div>
 						<div class="amount">
-							<div class="icon"><span class="ri-account-circle-fill"></span></div>
+							<div class="icon">
+								<span class="ri-account-circle-fill"></span>
+							</div>
 							<div class="title-amount">
-								Số lượng : <xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
+								Số lượng :
+								<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
 							</div>
 						</div>
 					</div>

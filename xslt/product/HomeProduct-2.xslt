@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
-
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
-		<section class="home_s-2" data-aos="fade-up">
-			<div class="container">
-				<div class="block-title">
-					<h1 class="head-title"><xsl:value-of disable-output-escaping="yes" select="ModuleTitle"></xsl:value-of></h1>
-					<div class="view-more">
-						<a>
-							<xsl:attribute name="href">
-							<xsl:value-of select="Zone/Url"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="title">
-								<xsl:value-of select="Zone/Title"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="target">
-								<xsl:value-of select="Zone/Target"></xsl:value-of>
-							</xsl:attribute>
-							Xem tất cả
-						</a>
-						<span class="ri-arrow-right-line"> </span>
+		<xsl:apply-templates select="Zone"></xsl:apply-templates>
+	</xsl:template>
+	<xsl:template match="Zone">
+		<xsl:if test="count(Product) &gt; 0">
+			<section class="home_s-2 section-product-home">
+				<div class="container">
+					<div class="block-title" data-aos="fade-up">
+						<h1 class="head-title">
+							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+						</h1>
+						<div class="view-more">
+							<a>
+								<xsl:attribute name="href">
+									<xsl:value-of select="Url"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+						Xem tất cả
+							</a>
+							<span class="ri-arrow-right-line"> </span>
+						</div>
 					</div>
-				</div>
-				<div class="home-slide-2-swiper-wrapper">
-					<div class="nav-arrow-prev"><em class="material-icons">arrow_back_ios</em></div>
-					<div class="nav-arrow-next"><em class="material-icons">arrow_forward_ios</em></div>
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<xsl:apply-templates select="Zone/Product" mode="ZoneProduct"></xsl:apply-templates>
+					<div class="home-slide-2-swiper-wrapper">
+						<div class="nav-arrow-prev">
+							<em class="material-icons">arrow_back_ios_new</em>
+						</div>
+						<div class="nav-arrow-next">
+							<em class="material-icons">arrow_forward_ios</em>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<xsl:apply-templates select="Product"></xsl:apply-templates>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</xsl:if>
 	</xsl:template>
-	<xsl:template match="Product" mode="ZoneProduct">
+	<xsl:template match="Product">
 		<div class="swiper-slide">
-			<div class="wrapper">
+			<div class="wrapper"  data-aos="fade-up">
+				<xsl:attribute name="data-aos-delay">
+					<xsl:value-of disable-output-escaping="yes" select="100 + position() *100"></xsl:value-of>
+				</xsl:attribute>
 				<div class="card-img zoom-in">
 					<a>
 						<xsl:attribute name="href">
@@ -45,9 +55,6 @@
 						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="target">
-							<xsl:value-of select="Target"></xsl:value-of>
 						</xsl:attribute>
 						<img >
 							<xsl:attribute name="src">
@@ -60,17 +67,14 @@
 					</a>
 				</div>
 				<div class="title">
-					<a class=" ">
+					<a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name="target">
-							<xsl:value-of select="Target"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</a>
 				</div>

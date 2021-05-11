@@ -1,6 +1,6 @@
 .block__tool
 	position: fixed
-	top: 65%
+	bottom: 10%
 	right: 5%
 	z-index: 99
 	opacity: 1
@@ -10,7 +10,8 @@
 	@media screen and ( max-width: 768px)
 		right: 10%
 	@media screen and ( max-width: 576px)
-		right: 15%
+		right: 17%
+		bottom: 17%
 	// ul
 		padding: 0
 		list-style: non
@@ -19,7 +20,7 @@
 			width: 50px
 			height: 50px
 			background-color: #da251c
-			border:  1px solid #ffffff
+			border: 1px solid #ffffff
 			border-radius: 50%
 			display: flex
 			align-items: center
@@ -38,9 +39,8 @@
 				top: 50%
 				left: 50%
 				transform: translate(-50%,-50%)
-				em 
+				em
 					color: #fff
-
 	&.active
 		opacity: 0
 		visibility: hidden
@@ -52,7 +52,7 @@
 .phonering-alo-phone.phonering-alo-hover,.phonering-alo-phone:hover
 	opacity: 1
 
-.phonering-alo-ph-circle 
+.phonering-alo-ph-circle
 	width: 80px
 	height: 80px
 	top: 20px
@@ -64,7 +64,7 @@
 	border: 2px solid #bfebfc 9
 	opacity: .1
 	-webkit-animation: phonering-alo-circle-anim 1.2s infinite ease-in-out
-	animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+	animation: phonering-alo-circle-anim 1.2s infinite ease-in-out
 	transition: all .5s
 	-webkit-transform-origin: 50% 50%
 	-ms-transform-origin: 50% 50%
@@ -83,12 +83,12 @@
 	opacity: .5
 
 .phonering-alo-phone.phonering-alo-green.phonering-alo-hover .phonering-alo-ph-circle,.phonering-alo-phone.phonering-alo-green:hover .phonering-alo-ph-circle
-	border-color: #75eb50 
+	border-color: #75eb50
 	border-color: #baf5a7
 	opacity: .5
 
 .phonering-alo-phone.phonering-alo-green .phonering-alo-ph-circle
-	border-color: #00aff2 
+	border-color: #00aff2
 	border-color: #bfebfc
 	opacity: .5
 
@@ -97,7 +97,7 @@
 	opacity: .5
 
 .phonering-alo-phone.phonering-alo-gray .phonering-alo-ph-circle
-	border-color: #75eb50 
+	border-color: #75eb50
 	opacity: .5
 
 .phonering-alo-ph-circle-fill
@@ -179,7 +179,7 @@
 	background-color: #75eb50
 	background-color: #75eb50
 
-.phonering-alo-phone.phonering-alo-green .phonering-alo-ph-img-circle 
+.phonering-alo-phone.phonering-alo-green .phonering-alo-ph-img-circle
 	background-color: #00aff2
 	background-color: #00aff2
 
@@ -192,221 +192,221 @@
 
 @-webkit-keyframes phonering-alo-circle-anim
 	0%
-		-webkit-transform: rotate(0) scale(.5) skew(1deg)
-		-webkit-opacity: .1
+	-webkit-transform: rotate(0) scale(.5) skew(1deg)
+	-webkit-opacity: .1
 
 	30%
-		-webkit-transform: rotate(0) scale(.7) skew(1deg)
-		-webkit-opacity: .5
+	-webkit-transform: rotate(0) scale(.7) skew(1deg)
+	-webkit-opacity: .5
 
 	100%
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		-webkit-opacity: .1
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	-webkit-opacity: .1
 
 @-webkit-keyframes phonering-alo-circle-fill-anim
-	0% 
-		-webkit-transform: rotate(0) scale(.7) skew(1deg)
-		opacity: .2
+	0%
+	-webkit-transform: rotate(0) scale(.7) skew(1deg)
+	opacity: .2
 
-	50% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		opacity: .2
+	50%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	opacity: .2
 
-	100% 
-		-webkit-transform: rotate(0) scale(.7) skew(1deg)
-		opacity: .2
+	100%
+	-webkit-transform: rotate(0) scale(.7) skew(1deg)
+	opacity: .2
 
 @-webkit-keyframes phonering-alo-circle-img-anim
-	0% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
+	0%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
 
-	10% 
-		-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+	10%
+	-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
 
-	20% 
-		-webkit-transform: rotate(25deg) scale(1) skew(1deg)
+	20%
+	-webkit-transform: rotate(25deg) scale(1) skew(1deg)
 
-	30% 
-		-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+	30%
+	-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
 
-	40% 
-		-webkit-transform: rotate(25deg) scale(1) skew(1deg)
+	40%
+	-webkit-transform: rotate(25deg) scale(1) skew(1deg)
 
-	50% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
+	50%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
 
-	100% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
+	100%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
 
-@-webkit-keyframes fadeInRight 
-	0% 
+@-webkit-keyframes fadeInRight
+	0%
+	opacity: 0
+	-webkit-transform: translate3d(100%,0,0)
+	-ms-transform: translate3d(100%,0,0)
+	transform: translate3d(100%,0,0)
+
+	100%
+	opacity: 1
+	-webkit-transform: none
+	-ms-transform: none
+	transform: none
+
+@keyframes fadeInRight
+	0%
 		opacity: 0
 		-webkit-transform: translate3d(100%,0,0)
 		-ms-transform: translate3d(100%,0,0)
 		transform: translate3d(100%,0,0)
 
-	100% 
+	100%
 		opacity: 1
 		-webkit-transform: none
 		-ms-transform: none
 		transform: none
 
-@keyframes fadeInRight 
-	0% 
-		opacity: 0
-		-webkit-transform: translate3d(100%,0,0)
-		-ms-transform: translate3d(100%,0,0)
-		transform: translate3d(100%,0,0)
+@-webkit-keyframes fadeOutRight
+	0%
+	opacity: 1
 
-	100% 
-		opacity: 1
-		-webkit-transform: none
-		-ms-transform: none
-		transform: none
+	100%
+	opacity: 0
+	-webkit-transform: translate3d(100%,0,0)
+	-ms-transform: translate3d(100%,0,0)
+	transform: translate3d(100%,0,0)
 
-@-webkit-keyframes fadeOutRight 
-	0% 
+@keyframes fadeOutRight
+	0%
 		opacity: 1
 
-	100% 
-		opacity: 0
-		-webkit-transform: translate3d(100%,0,0)
-		-ms-transform: translate3d(100%,0,0)
-		transform: translate3d(100%,0,0)
-
-@keyframes fadeOutRight 
-	0% 
-		opacity: 1
-
-	100% 
+	100%
 		opacity: 0
 		-webkit-transform: translate3d(100%,0,0)
 		-ms-transform: translate3d(100%,0,0)
 		transform: translate3d(100%,0,0)
 
 @-webkit-keyframes phonering-alo-circle-anim
-	0% 
-		-webkit-transform: rotate(0) scale(.5) skew(1deg)
-		transform: rotate(0) scale(.5) skew(1deg)
-		opacity: .1
+	0%
+	-webkit-transform: rotate(0) scale(.5) skew(1deg)
+	transform: rotate(0) scale(.5) skew(1deg)
+	opacity: .1
 
 
-	30% 
-		-webkit-transform: rotate(0) scale(.7) skew(1deg)
-		transform: rotate(0) scale(.7) skew(1deg)
-		opacity: .5
+	30%
+	-webkit-transform: rotate(0) scale(.7) skew(1deg)
+	transform: rotate(0) scale(.7) skew(1deg)
+	opacity: .5
 
 
-	100% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		transform: rotate(0) scale(1) skew(1deg)
-		opacity: .1
+	100%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	transform: rotate(0) scale(1) skew(1deg)
+	opacity: .1
 
 @keyframes phonering-alo-circle-anim
-	0% 
+	0%
 		-webkit-transform: rotate(0) scale(.5) skew(1deg)
 		transform: rotate(0) scale(.5) skew(1deg)
 		opacity: .1
 
 
-	30% 
+	30%
 		-webkit-transform: rotate(0) scale(.7) skew(1deg)
 		transform: rotate(0) scale(.7) skew(1deg)
 		opacity: .5
 
 
-	100% 
+	100%
 		-webkit-transform: rotate(0) scale(1) skew(1deg)
 		transform: rotate(0) scale(1) skew(1deg)
 		opacity: .1
 
 @-webkit-keyframes phonering-alo-circle-fill-anim
-	0% 
-		-webkit-transform: rotate(0) scale(.7) skew(1deg)
-		transform: rotate(0) scale(.7) skew(1deg)
-		opacity: .2
+	0%
+	-webkit-transform: rotate(0) scale(.7) skew(1deg)
+	transform: rotate(0) scale(.7) skew(1deg)
+	opacity: .2
 
-	50% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		transform: rotate(0) scale(1) skew(1deg)
-		opacity: .2
+	50%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	transform: rotate(0) scale(1) skew(1deg)
+	opacity: .2
 
 
-	100% 
-		-webkit-transform: rotate(0) scale(.7) skew(1deg)
-		transform: rotate(0) scale(.7) skew(1deg)
-		opacity: .2
+	100%
+	-webkit-transform: rotate(0) scale(.7) skew(1deg)
+	transform: rotate(0) scale(.7) skew(1deg)
+	opacity: .2
 
 @keyframes phonering-alo-circle-fill-anim
-	0% 
+	0%
 		-webkit-transform: rotate(0) scale(.7) skew(1deg)
 		transform: rotate(0) scale(.7) skew(1deg)
 		opacity: .2
 
-	50% 
+	50%
 		-webkit-transform: rotate(0) scale(1) skew(1deg)
 		transform: rotate(0) scale(1) skew(1deg)
 		opacity: .2
 
-	100% 
+	100%
 		-webkit-transform: rotate(0) scale(.7) skew(1deg)
 		transform: rotate(0) scale(.7) skew(1deg)
 		opacity: .2
 
 @-webkit-keyframes phonering-alo-circle-img-anim
-	0% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		transform: rotate(0) scale(1) skew(1deg)
+	0%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	transform: rotate(0) scale(1) skew(1deg)
 
-	10% 
-		-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
-		transform: rotate(-25deg) scale(1) skew(1deg)
+	10%
+	-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+	transform: rotate(-25deg) scale(1) skew(1deg)
 
-	20% 
-		-webkit-transform: rotate(25deg) scale(1) skew(1deg)
-		transform: rotate(25deg) scale(1) skew(1deg)
+	20%
+	-webkit-transform: rotate(25deg) scale(1) skew(1deg)
+	transform: rotate(25deg) scale(1) skew(1deg)
 
-	30% 
-		-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
-		transform: rotate(-25deg) scale(1) skew(1deg)
+	30%
+	-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+	transform: rotate(-25deg) scale(1) skew(1deg)
 
-	40% 
-		-webkit-transform: rotate(25deg) scale(1) skew(1deg)
-		transform: rotate(25deg) scale(1) skew(1deg)
+	40%
+	-webkit-transform: rotate(25deg) scale(1) skew(1deg)
+	transform: rotate(25deg) scale(1) skew(1deg)
 
-	50% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		transform: rotate(0) scale(1) skew(1deg)
+	50%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	transform: rotate(0) scale(1) skew(1deg)
 
-	100% 
-		-webkit-transform: rotate(0) scale(1) skew(1deg)
-		transform: rotate(0) scale(1) skew(1deg)
+	100%
+	-webkit-transform: rotate(0) scale(1) skew(1deg)
+	transform: rotate(0) scale(1) skew(1deg)
 
 @keyframes phonering-alo-circle-img-anim
 	0%
 		-webkit-transform: rotate(0) scale(1) skew(1deg)
 		transform: rotate(0) scale(1) skew(1deg)
 
-	10% 
+	10%
 		-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
 		transform: rotate(-25deg) scale(1) skew(1deg)
 
-	20% 
+	20%
 		-webkit-transform: rotate(25deg) scale(1) skew(1deg)
 		transform: rotate(25deg) scale(1) skew(1deg)
 
-	30% 
+	30%
 		-webkit-transform: rotate(-25deg) scale(1) skew(1deg)
 		transform: rotate(-25deg) scale(1) skew(1deg)
 
-	40% 
+	40%
 		-webkit-transform: rotate(25deg) scale(1) skew(1deg)
 		transform: rotate(25deg) scale(1) skew(1deg)
 
-	50% 
+	50%
 		-webkit-transform: rotate(0) scale(1) skew(1deg)
 		transform: rotate(0) scale(1) skew(1deg)
 
-	100% 
+	100%
 		-webkit-transform: rotate(0) scale(1) skew(1deg)
 		transform: rotate(0) scale(1) skew(1deg)

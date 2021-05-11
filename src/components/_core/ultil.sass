@@ -1,0 +1,44 @@
+.visually-hidden
+	position: absolute
+	overflow: hidden
+	clip: rect(0 0 0 0)
+	height: 1px
+	width: 1px
+	margin: -1px
+	padding: 0
+	border: 0
+.notice-sucess
+	font-size: 18px
+	color: #0058b7
+	font-weight: bold
+.wrap-button
+	display: flex
+	align-items: center
+	justify-content: center
+	@media screen and ( max-width: 1350px )
+		margin-top: 15px
+	.nav-arrow-prev, .nav-arrow-next
+		@media screen and ( max-width: 1350px )
+			width: 25px !important
+.section-product-home
+	&+.section-product-home
+		margin-top: 15px
+	.home-slide-2-swiper-wrapper
+		opacity: 0
+		transition: .3s all ease-in-out
+		.swiper-slide
+			transition: .3s all ease-in-out
+			transform: translateY(3px)
+			opacity: 0
+		&.active
+			opacity: 1
+			.swiper-slide
+				@for $i from 1 through 5
+					&:nth-child(#{$i})
+						opacity: 1
+						transform: translateY(-3px)
+						transition-delay: .1s + $i * .1s
+.haumaicontact-page
+	.section-product-home
+		&:first-child
+			margin-top: 20px

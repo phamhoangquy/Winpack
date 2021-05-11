@@ -9,7 +9,6 @@ header
 	@media screen and ( max-width: 1279px )
 		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05)
 		background: #ffffff
-
 	.header
 		display: flex
 		align-items: center
@@ -27,7 +26,8 @@ header
 				display: flex
 				align-items: center
 				width: max-content
-
+				@media screen and ( max-width: 1279px )
+					display: none
 		.header-infor
 			display: flex
 			justify-content: flex-end
@@ -35,7 +35,10 @@ header
 			padding-bottom: 15px
 			@media screen and ( max-width: 1279px)
 				padding-bottom: 0
-
+				.searchbox
+					display: none !important
+				.hotline-wrapper
+					display: none !important
 			.searchbox
 				display: flex
 				justify-content: space-between
@@ -160,14 +163,25 @@ header
 				padding-left: 5px
 		&:hover
 			ul
-				display: unset
+				top: 20px
+				opacity: 1
+				visibility: visible
 		ul
-			display: none
-			list-style: none
 			position: absolute
+			top: 50px
+			left: 50%
 			padding: 0
-			top: 20px
-			right: 19px
+			list-style: none
+			background-color: white
+			width: 34px
+			display: flex
+			opacity: 0
+			visibility: hidden
+			justify-content: center
+			transform: translateX(-50%)
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.18)
+			border-radius: 5px
+			transition: .3s all ease-in-out
 		a.current
 			display: flex
 		@media screen and ( max-width: 1279px)
@@ -187,11 +201,11 @@ header
 		transform: translateX(20%)
 		transition: all .5s cubic-bezier(.68,-.55,.265,1.55)
 		overflow: scroll
-			
 		@media screen and ( max-width: 1279px )
-			width: 50%
+			width: 100%
 		@media screen and ( max-width: 576px )
 			width: 100%
+			padding: 30px 10px
 		.header_btn
 			position: absolute
 			top: 0
@@ -210,53 +224,73 @@ header
 			width: 100%
 			flex-direction: column
 			justify-content: left
-			padding-top: 30px
+			padding-top: 60px
 			.nav-menu
 				padding-left: 0
+				margin-top: 0px
+				.menu-list
+					&:nth-child(4)
+						.mega-menu
+							.has-mega-menu
+								li
+									padding: 0px 10px !important
+									border-right: 0px
+									flex: 0 0 50%
+									max-width: 50%
+									margin-bottom: 15px
+									.img-has-mega
+										display: flex
+										align-items: center
+										flex-direction: column
+										a
+											width: inherit
+											display: block
+											@media screen and ( max-width: 575px )
+												width: 130px
+												height: 130px
+
+
+					.mega-menu
+						width: 100%
 				li
 					position: relative
 					&:first-child
-						padding-bottom: 15px
 						a
 							position: relative
-							font-size: 0
-							&::before
-								position: absolute
-								content: '\ee1c'
-								font-family: "remixicon"
-								top: 0
-								left: 0
-								font-size: 14px
-								color: #333333
+							font-size: r(14px)
 			.searchbox
 				display: flex
 				justify-content: space-between
 				position: relative
 				border-right: 1px solid #e5e5e5
-				width: max-content
+				width: 100%
 				height: 40px
 				background: #f1f1f1
-				border-radius: 50px
-				padding-left: 30px
-				padding-right: 15px
+				padding-left: 15px
 				input
 					border: 0
 					padding-top: 5px
 					font-style: italic
 					font-size: 14px
 					color: #999999
+					width: 100%
 					background: transparent
 				button
 					border: 0
 					background-color: unset
+					width: 50px
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
 					span
-						font-size: 16px
+						font-size: 22px
 						color: #007ec3
 			.hotline-box
 				display: flex
 				justify-content: left
 				align-items: center
-				padding-top: 15px
+				// padding-top: 15px
 				.icon-tel
 					span
 						padding-right: 10px

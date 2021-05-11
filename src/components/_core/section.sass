@@ -1,11 +1,19 @@
 
-// Product 
+// Product
 .home_s-2,.home_s-3,.home_s-4,.home_s-5,.product-list,.product-detail-4,.haumai-contact,.haumai-contact-2,.haumai-contact-3,.haumai-contact-4,.haumai-contact-5,.haumai-contact-6,.haumai-contact-7,.haumai-contact-8,.solution-list
 	background: #f0f5f9
+	.swiper-container
+		padding: 5px 0px
 	.wrapper
 		padding: 30px 25px
 		background-color: rgb(255, 255, 255)
 		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1)
+		transition: .3s all ease-in-out
+		border: 1px solid transparent
+		&:hover
+			border: 1px solid #dd352d
+			box-shadow: 3px 2px 9px rgba(0, 0, 0, 0.18)
+			transform: translateY(-3px)
 		@media screen and ( max-width: 576px)
 			padding: 15px
 		.card-img
@@ -46,7 +54,7 @@
 
 .news-detail-page,.recruitment-detail,.recruitment-detail-other
 	background: #f0f5f9
-	
+
 .homepage
 	.home_s-6,.home_s-7
 		background: #fff
@@ -133,14 +141,14 @@
 									&:hover
 										background: #da251c
 								// #ctl00_mainContent_login1_LoginCtrl_lnkPasswordRecovery
-									font-size: 14px
-									color: #333
-									padding-right: 10px
+										font-size: 14px
+										color: #333
+										padding-right: 10px
 									&:hover
 										color: #da251c
 								// #ctl00_mainContent_login1_LoginCtrl_lnkRegisterExtraLink
-									font-size: 14px
-									color: #333
+										font-size: 14px
+										color: #333
 									&:hover
 										color: #da251c
 								#ctl00_mainContent_login1_LoginCtrl_lnkPasswordRecovery,#ctl00_mainContent_login1_LoginCtrl_lnkRegisterExtraLink
@@ -206,7 +214,7 @@
 								height: auto !important
 								flex-direction: row !important
 	.form-group .fa.fa-exclamation-triangle
-		right: auto 
+		right: auto
 		left: 68%
 		transform: translateX(-50%)
 		top: 32px

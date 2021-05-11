@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
-
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ProductList">
 		<div class="block-title">
-			<h1 class="head-title"><xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of></h1>
+			<h1 class="head-title">
+				<xsl:value-of select="ZoneTitle" disable-output-escaping="yes"></xsl:value-of>
+			</h1>
 			<div class="item-sort">
 				<div class="text-sort">Sắp xếp</div>
 				<div class="select-sort">

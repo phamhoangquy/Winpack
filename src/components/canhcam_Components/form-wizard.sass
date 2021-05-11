@@ -10,6 +10,7 @@
 		color: #333333
 		background: #f5f5f5
 		// caret-color: $main
+		transition: .3s all ease-in-out
 		&:placeholder
 			color: #999999
 			font-size: 16px
@@ -17,7 +18,7 @@
 		&:focus
 			outline: none
 			// border-color: $main
-			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3)
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
 	textarea
 		height: 170px
 	&>div
@@ -61,7 +62,11 @@
 			margin: 0 10px
 			font-size: 0
 			&:after
-				content: url('/Data/Sites/1/media/change.png')
+				color: #999
+				font-family: Material Icons
+				font-size: 32px
+				font-weight: 400
+				content: "replay"
 	.frm-btnwrap
 		position: absolute
 		right: 0
@@ -72,24 +77,40 @@
 		.frm-btn-reset
 			display: none
 		.frm-btn
-			width: 100%
+			width: fit-content
+			&::after
+				position: absolute
+				right: 28px
+				top: 50%
+				transform: translateY(-50%)
+				content: 'arrow_forward'
+				font-family: 'Material Icons'
+				color: white
+				font-size: r(26px)
+				text-transform: none
+				pointer-events: none
+				transition: .3s all ease-in-out
 		input
 			width: 180px
-			padding: 13px 30px
+			padding: 8px 30px
 			border-radius: 50px
 			background: #004995 !important
 			text-transform: uppercase
 			color: #ffffff
 			border: none
+			transition: .3s all ease-in-out
+			position: relative
 			&:hover
-				background: #da251c !important
+				background-color: #da251c !important
+				box-shadow: 0 0px 15px rgba(#da251c,.5 )
+
 	@media(min-width: 768px)
 		.frm-btnwrap
 			float: left
 			margin-top: 0
 			width: 25%
 			margin-left: 10px
-			
+
 .frm-btn-reset
 	display: none
 .frm-captcha
@@ -102,7 +123,7 @@
 		max-width: auto
 		max-width: 170px
 		@media screen and ( max-width:1200px)
-			max-width: 110px
+			max-width: 100%
 		@media screen and ( max-width: 576px)
 			max-width: 120px
 	.frm-captcha-input
@@ -110,10 +131,11 @@
 		padding: 0 60px 0 0 !important
 		margin: 0 !important
 		order: 1
+		width: 100%
 		@media screen and ( max-width: 768px)
 			width: 100%
 		@media screen and ( max-width:576px)
-			padding: 0  !important
+			padding: 0 !important
 			margin-left: 0
 			margin-top: 30px
 			width: 100%
@@ -127,11 +149,8 @@
 			width: 135px !important
 			margin-left: 15px
 			@media screen and ( max-width: 1024px)
-				width: 120px !important
-			@media screen and ( max-width: 768px)
 				width: 100% !important
 			@media screen and ( max-width: 576px)
-				width: 100% !important
 				margin-left: 0
 	// .rcRefreshImage
 	// 	position: absolute
@@ -173,7 +192,7 @@
 	margin-left: 10px
 	@media screen and ( max-width: 576px)
 		margin: 0
-		
+
 #ctl00_mainContent_ctl06_captcha_CaptchaLinkButton
 	#text
 		display: none
@@ -186,10 +205,37 @@
 		>div
 			display: flex
 			position: relative
-			flex-direction: column-reverse
 			height: 40px !important
+			margin-right: 15px
+			align-items: center
 			margin-top: 0
 			@media (max-width: 767.98px)
 				margin-right: 0
-				width: 130px
+				width: auto
 				flex-direction: unset
+#wrap-form-popup
+	height: 540px
+	max-width: 825px !important
+	.wrap-form
+		span
+			&.fa-exclamation-triangle
+				font-weight: 400!important
+				font-style: italic
+				color: red
+				font-family: 'Montserrat', sans-serif !important
+				font-size: .75rem
+				position: absolute
+				top: 34%
+				transform: translateY(-50%)
+				right: 20px
+				animation: AlertError 0.4s 1 linear!important
+				padding: 55px 62px
+				&::before
+					display: none
+		textarea
+			padding: 0px 0px
+		.frm-btnwrap
+			margin-left: 0
+			position: static
+			input
+				margin-bottom: 0
