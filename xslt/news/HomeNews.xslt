@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
-		<section class="home_s-7" data-aos="fade-up" data-aos-offset="-400">
+		<section class="home_s-7" data-aos="fade-up" data-aos-offset="-800" data-aos-duration="500">
 			<div class="container">
 				<h2 class="head-title">
 					<xsl:value-of disable-output-escaping="yes" select="ModuleTitle"></xsl:value-of>

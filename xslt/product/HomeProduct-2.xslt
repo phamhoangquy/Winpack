@@ -26,15 +26,17 @@
 						</div>
 					</div>
 					<div class="home-slide-2-swiper-wrapper">
-						<div class="nav-arrow-prev">
-							<em class="material-icons">arrow_back_ios_new</em>
-						</div>
-						<div class="nav-arrow-next">
-							<em class="material-icons">arrow_forward_ios</em>
-						</div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<xsl:apply-templates select="Product"></xsl:apply-templates>
+							</div>
+						</div>
+						<div class="wrap-button">
+							<div class="nav-arrow-prev">
+								<em class="material-icons">arrow_back_ios_new</em>
+							</div>
+							<div class="nav-arrow-next">
+								<em class="material-icons">arrow_forward_ios</em>
 							</div>
 						</div>
 					</div>
@@ -43,40 +45,42 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="Product">
-		<div class="swiper-slide">
-			<div class="wrapper"  data-aos="fade-up">
+		<div class="swiper-slide" >
+			<div class="box-animation"  data-aos="fade-up">
 				<xsl:attribute name="data-aos-delay">
 					<xsl:value-of disable-output-escaping="yes" select="100 + position() *100"></xsl:value-of>
 				</xsl:attribute>
-				<div class="card-img zoom-in">
-					<a>
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="title">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-						<img >
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
+				<div class="wrapper">
+					<div class="card-img zoom-in">
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:attribute name="alt">
+							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
-						</img>
-					</a>
-				</div>
-				<div class="title">
-					<a>
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="title">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-					</a>
+							<img >
+								<xsl:attribute name="src">
+									<xsl:value-of select="ImageUrl"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+							</img>
+						</a>
+					</div>
+					<div class="title">
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="Url"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

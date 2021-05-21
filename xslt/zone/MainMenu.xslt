@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-<xsl:output method="html" indent="yes"/>
+	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/ZoneList">
 		<ul class="nav-menu">
 			<xsl:apply-templates select="Zone"></xsl:apply-templates>
@@ -18,7 +18,7 @@
 					<div class="moblie-show-menu">
 						<a class="title-menu-list">
 							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
+								<xsl:text disable-output-escaping="yes">javascript:;</xsl:text>
 							</xsl:attribute>
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
@@ -79,7 +79,6 @@
 					</div>
 				</li>
 			</xsl:when>
-
 			<xsl:when test="position()=4">
 				<li class="menu-list">
 					<xsl:if test="IsActive = 'true'">
@@ -106,13 +105,11 @@
 						<div class="container">
 							<ul class="has-mega-menu">
 								<xsl:apply-templates select="Zone" mode="ZoneChild-2"></xsl:apply-templates>
-								
 							</ul>
 						</div>
 					</div>
 				</li>
 			</xsl:when>
-			
 			<xsl:when test="position()=5">
 				<li class="menu-list">
 					<xsl:if test="IsActive = 'true'">
@@ -139,13 +136,11 @@
 						<div class="container">
 							<ul class="has-mega-menu">
 								<xsl:apply-templates select="Zone" mode="ZoneChild-3"></xsl:apply-templates>
-								
 							</ul>
 						</div>
 					</div>
 				</li>
 			</xsl:when>
-
 			<xsl:otherwise>
 				<li class="menu-list">
 					<xsl:if test="IsActive = 'true'">
@@ -169,7 +164,6 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
 	<xsl:template match="Zone" mode="ZoneChild">
 		<li>
 			<a class=" ">
@@ -186,7 +180,6 @@
 			</a>
 		</li>
 	</xsl:template>
-
 	<xsl:template match="Zone" mode="ZoneChild-2">
 		<li>
 			<div class="img-has-mega">
@@ -226,7 +219,6 @@
 			</div>
 		</li>
 	</xsl:template>
-
 	<xsl:template match="Zone" mode="ZoneChild-3">
 		<li>
 			<div class="img-has-mega">
