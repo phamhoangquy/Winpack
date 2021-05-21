@@ -9,12 +9,12 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="row">
-					<xsl:apply-templates select="News[position() > 1 and position() &lt; 6]" mode="Right"></xsl:apply-templates>
+					<xsl:apply-templates select="News[position()&gt;1 and position()&lt;6]" mode="Right"></xsl:apply-templates>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<xsl:apply-templates select="News[position() > 4]" mode="Bottom"></xsl:apply-templates>
+			<xsl:apply-templates select="News[position() > 5]" mode="Bottom"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 

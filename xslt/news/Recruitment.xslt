@@ -66,7 +66,7 @@
 							</div>
 							<time>
 								Hạn nộp :
-								<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
+								<xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of>
 							</time>
 						</div>
 						<div class="amount">
